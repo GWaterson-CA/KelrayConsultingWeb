@@ -67,12 +67,12 @@ export const processTimeline = [
 ];
 
 export const logoPlaceholders = [
-  "Northline Group",
-  "Aster Build",
-  "FieldOps Co",
-  "Summit Legal",
-  "Helm Commerce",
-  "BrightPath Insurance",
+  "Kelray Heating",
+  "FrothMonkey",
+  "MetalQuoteHQ",
+  "MayDay Metals",
+  "Quantum Technologies",
+  "Business Innovation Society of Sea to Sky",
 ];
 
 export const testimonials = [
