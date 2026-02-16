@@ -107,6 +107,22 @@ npm run lint
 npm run build
 ```
 
+## Automated Supabase migrations (GitHub Actions)
+A workflow is included at `.github/workflows/supabase-migrations.yml`.
+
+It runs automatically on pushes to `main` when files in `supabase/migrations/**` change, and can also be run manually from the Actions tab.
+
+Add these GitHub repository secrets:
+- `SUPABASE_ACCESS_TOKEN`: a Supabase personal access token from Supabase dashboard account settings
+- `SUPABASE_PROJECT_REF`: `xuccrinmnefemwtawkbt`
+
+Optional local helper command:
+```bash
+npm run db:push
+```
+
+This assumes the project has already been linked once (`supabase link --project-ref ...`).
+
 ## Deployment (Vercel)
 1. Push repository to Git provider.
 2. Import project in Vercel.
