@@ -68,7 +68,7 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <AnimatedSection key={service.title} delay={index * 0.04}>
             <Card className="h-full">
-              <service.icon className="h-6 w-6 text-cyan-200" />
+              <service.icon className="h-6 w-6 text-emerald-200" />
               <h3 className="mt-4 text-xl font-semibold text-white">{service.title}</h3>
               <p className="mt-3 text-sm text-slate-300">{service.description}</p>
             </Card>
@@ -90,7 +90,7 @@ export default function ServicesPage() {
             <AnimatedSection key={option.title} delay={index * 0.05}>
               <Card className="h-full">
                 <h3 className="text-xl font-semibold text-white">{option.title}</h3>
-                <p className="mt-3 text-sm text-cyan-200">Outcome: {option.outcome}</p>
+                <p className="mt-3 text-sm text-emerald-200">Outcome: {option.outcome}</p>
                 <p className="mt-4 text-sm text-slate-300">Deliverables: {option.deliverables}</p>
                 <p className="mt-4 text-sm text-slate-300">Use case: {option.useCase}</p>
               </Card>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
         </AnimatedSection>
       </section>
 
-      <AnimatedSection className="mt-16 rounded-3xl border border-cyan-300/30 bg-gradient-to-r from-cyan-500/20 to-sky-500/20 p-8">
+      <AnimatedSection className="mt-16 rounded-3xl border border-emerald-300/30 bg-gradient-to-r from-emerald-500/20 to-amber-500/20 p-8">
         <h2 className="text-3xl font-semibold text-white">Start with a free 2-hour intro session.</h2>
         <p className="mt-3 text-slate-200">
           {`We'll review your current AI usage, identify high-leverage opportunities, and suggest a practical next step.`}

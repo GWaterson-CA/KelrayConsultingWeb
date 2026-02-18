@@ -77,7 +77,7 @@ export function ContactForm() {
         <select
           id="budgetRange"
           {...register("budgetRange")}
-          className="h-11 w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-cyan-300"
+          className="h-11 w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-300"
         >
           <option value="" className="bg-slate-900">
             Select a range

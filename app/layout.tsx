@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Space_Grotesk } from "next/font/google";
 
+import { BRAND } from "@/lib/brand";
+
 import "./globals.css";
 
 const headingFont = Space_Grotesk({
@@ -13,36 +15,36 @@ const bodyFont = Manrope({
   variable: "--font-body",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || BRAND.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Forge AI Contracting | AI Consulting for Business Teams",
-    template: "%s | Forge AI Contracting",
+    default: `${BRAND.name} | AI Strategy, Training, and Automation`,
+    template: `%s | ${BRAND.name}`,
   },
   description:
-    "AI consulting and contracting for businesses: capability reviews, staff training, workflow automation, and custom AI solutions.",
+    "Ascent Business Solutions delivers practical AI consulting: capability reviews, team training, process automation, and custom business tools.",
   openGraph: {
-    title: "Forge AI Contracting",
+    title: BRAND.name,
     description:
-      "Move beyond AI-lite. We train teams, redesign workflows, and ship practical AI solutions with measurable outcomes.",
+      "Operational AI for real businesses. We redesign processes, train teams, and implement measurable systems.",
     url: siteUrl,
-    siteName: "Forge AI Contracting",
+    siteName: BRAND.name,
     type: "website",
     images: [
       {
         url: "/images/og-cover.svg",
         width: 1200,
         height: 630,
-        alt: "Forge AI Contracting",
+        alt: BRAND.name,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Forge AI Contracting",
-    description: "Pragmatic AI consulting and custom implementation for businesses.",
+    title: BRAND.name,
+    description: BRAND.tagline,
     images: ["/images/og-cover.svg"],
   },
 };

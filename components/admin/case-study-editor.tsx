@@ -142,7 +142,7 @@ export function CaseStudyEditor({ caseStudy, message, isError = false }: CaseStu
             Published
           </label>
           {slug ? (
-            <Link href={`/case-studies/${slug}?preview=1`} target="_blank" className="text-sm font-medium text-cyan-200 hover:text-cyan-100">
+            <Link href={`/case-studies/${slug}?preview=1`} target="_blank" className="text-sm font-medium text-emerald-200 hover:text-emerald-100">
               Preview draft
             </Link>
           ) : null}

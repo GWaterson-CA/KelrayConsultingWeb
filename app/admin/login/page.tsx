@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import { signInAction } from "@/app/admin/actions";
+import { BRAND } from "@/lib/brand";
 import { getAdminSession } from "@/lib/admin";
 
 export const metadata: Metadata = {
-  title: "Admin Login | Forge AI Contracting",
+  title: `Admin Login | ${BRAND.name}`,
 };
 
 type LoginPageProps = {
@@ -64,7 +65,7 @@ export default async function AdminLoginPage({ searchParams }: LoginPageProps) {
         </div>
         <button
           type="submit"
-          className="inline-flex h-11 items-center justify-center rounded-full bg-cyan-400 px-6 text-sm font-medium text-slate-950 hover:bg-cyan-300"
+          className="inline-flex h-11 items-center justify-center rounded-full bg-emerald-400 px-6 text-sm font-medium text-slate-950 hover:bg-emerald-300"
         >
           Sign in
         </button>

@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import { AnimatedSection } from "@/components/animated-section";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { BRAND } from "@/lib/brand";
 import { getAdminSession } from "@/lib/admin";
 import { getCaseStudyBySlug } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
@@ -63,7 +64,7 @@ export default async function CaseStudyDetailPage({ params, searchParams }: Case
     datePublished: caseStudy.published_at ?? caseStudy.created_at,
     author: {
       "@type": "Organization",
-      name: "Forge AI Contracting",
+      name: BRAND.name,
     },
   };
 
@@ -102,8 +103,8 @@ export default async function CaseStudyDetailPage({ params, searchParams }: Case
 
       <AnimatedSection className="mt-10 grid gap-5 md:grid-cols-3">
         {caseStudy.metrics.map((metric) => (
-          <Card key={metric.label} className="bg-cyan-400/10">
-            <p className="text-xs uppercase tracking-wider text-cyan-100">{metric.label}</p>
+          <Card key={metric.label} className="bg-emerald-400/10">
+            <p className="text-xs uppercase tracking-wider text-emerald-100">{metric.label}</p>
             <p className="mt-2 text-3xl font-semibold text-white">{metric.value}</p>
           </Card>
         ))}
@@ -112,13 +113,13 @@ export default async function CaseStudyDetailPage({ params, searchParams }: Case
       <AnimatedSection className="mt-10 grid gap-5 lg:grid-cols-2">
         <Card>
           <h2 className="text-xl font-semibold text-white">Problem</h2>
-          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-cyan-200 [&_li]:ml-5 [&_ul]:list-disc">
+          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-emerald-200 [&_li]:ml-5 [&_ul]:list-disc">
             <ReactMarkdown>{caseStudy.problem}</ReactMarkdown>
           </div>
         </Card>
         <Card>
           <h2 className="text-xl font-semibold text-white">Approach</h2>
-          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-cyan-200 [&_li]:ml-5 [&_ul]:list-disc">
+          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-emerald-200 [&_li]:ml-5 [&_ul]:list-disc">
             <ReactMarkdown>{caseStudy.approach}</ReactMarkdown>
           </div>
         </Card>
@@ -146,11 +147,11 @@ export default async function CaseStudyDetailPage({ params, searchParams }: Case
       <AnimatedSection className="mt-5">
         <Card>
           <h2 className="text-xl font-semibold text-white">Results</h2>
-          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-cyan-200 [&_li]:ml-5 [&_ul]:list-disc">
+          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-emerald-200 [&_li]:ml-5 [&_ul]:list-disc">
             <ReactMarkdown>{caseStudy.results}</ReactMarkdown>
           </div>
           {caseStudy.testimonial_quote ? (
-            <blockquote className="mt-5 rounded-2xl border border-cyan-300/30 bg-cyan-300/10 p-4 text-slate-100">
+            <blockquote className="mt-5 rounded-2xl border border-emerald-300/30 bg-emerald-300/10 p-4 text-slate-100">
               &quot;{caseStudy.testimonial_quote}&quot;
             </blockquote>
           ) : null}

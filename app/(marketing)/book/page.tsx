@@ -3,10 +3,11 @@ import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
 import { BookingInterestForm } from "@/components/forms/booking-interest-form";
 import { SectionHeading } from "@/components/section-heading";
+import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Book",
-  description: "Book a free intro call or paid client session with Forge AI Contracting.",
+  description: `Book a free intro call or paid client session with ${BRAND.name}.`,
 };
 
 const freeIntroEmbed = process.env.NEXT_PUBLIC_FREE_INTRO_CALENDAR_EMBED;

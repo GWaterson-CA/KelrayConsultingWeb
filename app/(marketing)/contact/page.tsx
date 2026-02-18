@@ -3,10 +3,11 @@ import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
 import { ContactForm } from "@/components/forms/contact-form";
 import { SectionHeading } from "@/components/section-heading";
+import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Forge AI Contracting about AI strategy, training, and implementation support.",
+  description: `Contact ${BRAND.name} about AI strategy, training, and implementation support.`,
 };
 
 export default function ContactPage() {

@@ -71,7 +71,7 @@ export const logoPlaceholders = [
   "FrothMonkey",
   "MetalQuoteHQ",
   "MayDay Metals",
-  "Quantum Technologies",
+  "OSO Industries",
   "Business Innovation Society of Sea to Sky",
 ];
 
