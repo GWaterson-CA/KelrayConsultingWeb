@@ -4,11 +4,12 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { AnimatedSection } from "@/components/animated-section";
 import { FeaturedCaseCarousel } from "@/components/featured-case-carousel";
 import { SectionHeading } from "@/components/section-heading";
+import { TrustedTeamsMarquee } from "@/components/trusted-teams-marquee";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BRAND } from "@/lib/brand";
 import { getFeaturedCaseStudies } from "@/lib/data";
-import { logoPlaceholders, processTimeline, services, testimonials } from "@/lib/site-content";
+import { processTimeline, services, testimonials, trustedTeams } from "@/lib/site-content";
 
 export default async function HomePage() {
   const featured = await getFeaturedCaseStudies(3);
@@ -89,15 +90,8 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <AnimatedSection>
           <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Trusted by growth-focused teams</p>
-          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
-            {logoPlaceholders.map((logo) => (
-              <div
-                key={logo}
-                className="flex min-h-[128px] items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 text-center text-sm leading-snug text-slate-300"
-              >
-                {logo}
-              </div>
-            ))}
+          <div className="mt-8">
+            <TrustedTeamsMarquee teams={trustedTeams} />
           </div>
         </AnimatedSection>
       </section>

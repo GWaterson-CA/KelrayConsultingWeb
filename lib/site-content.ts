@@ -66,13 +66,47 @@ export const processTimeline = [
   { title: "Iterate", detail: "Continuous optimization using performance metrics and user feedback." },
 ];
 
-export const logoPlaceholders = [
-  "Kelray Heating",
-  "FrothMonkey",
-  "MetalQuoteHQ",
-  "MayDay Metals",
-  "OSO Industries",
-  "Business Innovation Society of Sea to Sky",
+export type TrustedTeam = {
+  name: string;
+  website?: string;
+  logoUrl?: string;
+};
+
+export const trustedTeams: TrustedTeam[] = [
+  {
+    name: "Kelray Heating",
+    website: "https://www.kelrayheating.ca",
+    logoUrl: "https://kelrayheating.ca/cdn/shop/files/Kelray_outdoor_heating.png?v=1748285830&width=600",
+  },
+  {
+    name: "FrothMonkey",
+    website: "https://www.frothmonkey.com",
+    logoUrl: "https://www.frothmonkey.com/FrothMonkey%20Logo%20Blue.png",
+  },
+  {
+    name: "MetalQuoteHQ",
+  },
+  {
+    name: "MayDay Metals",
+  },
+  {
+    name: "OSO Industries",
+    website: "https://www.osoindustries.com",
+    logoUrl:
+      "https://static1.squarespace.com/static/64a495790ac7724e5f2709b7/t/67847fa7f6a7485ca78d940c/1736736679217/LOGO+copy.png?format=1500w",
+  },
+  {
+    name: "Business Innovation Society of Sea to Sky",
+    website: "https://www.biss2s.com",
+    logoUrl:
+      "https://static.wixstatic.com/media/512006_e0324144a65a475498b1f3da1ada90c6~mv2.png/v1/fill/w_1200,h_244,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/512006_e0324144a65a475498b1f3da1ada90c6~mv2.png",
+  },
+  {
+    name: "Vista Security",
+    website: "https://www.vistasecurity.ca",
+    logoUrl:
+      "https://static1.squarespace.com/static/608b2c7e845e223dfb473325/t/60f0db492606b657d3530810/1626397513149/Vistasecurityca_print.png?format=1500w",
+  },
 ];
 
 export const testimonials = [

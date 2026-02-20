@@ -18,6 +18,22 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "kelrayheating.ca",
+      },
+      {
+        protocol: "https",
+        hostname: "www.frothmonkey.com",
+      },
+      {
+        protocol: "https",
+        hostname: "static1.squarespace.com",
+      },
+      {
+        protocol: "https",
+        hostname: "static.wixstatic.com",
+      },
     ],
   },
 };

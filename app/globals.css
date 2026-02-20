@@ -51,6 +51,32 @@ h6 {
   pointer-events: none;
 }
 
+@keyframes trusted-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.trusted-marquee-track {
+  animation: trusted-marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.trusted-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trusted-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
 @keyframes accordion-down {
   from {
     height: 0;
