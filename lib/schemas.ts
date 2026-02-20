@@ -5,6 +5,7 @@ import { makeSlug } from "@/lib/utils";
 export const contactFormSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Please provide a valid email"),
+  phone: z.string().min(7, "Phone number is required"),
   company: z.string().min(2, "Company is required"),
   role: z.string().min(2, "Role is required"),
   message: z.string().min(20, "Please share a little more context"),
@@ -14,6 +15,7 @@ export const contactFormSchema = z.object({
 export const bookingInterestSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Please provide a valid email"),
+  phone: z.string().min(7, "Phone number is required"),
   company: z.string().min(2, "Company is required"),
   callType: z.enum(["free_intro", "existing_client_paid"]),
   details: z.string().min(10, "Please share your request"),

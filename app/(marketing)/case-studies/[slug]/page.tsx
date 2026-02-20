@@ -7,18 +7,16 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { BRAND } from "@/lib/brand";
-import { getAdminSession } from "@/lib/admin";
 import { getCaseStudyBySlug } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
 type CaseStudyDetailPageProps = {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ preview?: string }>;
 };
 
 export async function generateMetadata({ params }: CaseStudyDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const caseStudy = await getCaseStudyBySlug(slug, true);
+  const caseStudy = await getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     return { title: "Case study" };
@@ -41,16 +39,9 @@ export async function generateMetadata({ params }: CaseStudyDetailPageProps): Pr
   };
 }
 
-export default async function CaseStudyDetailPage({ params, searchParams }: CaseStudyDetailPageProps) {
-  const [{ slug }, query] = await Promise.all([params, searchParams]);
-
-  let includeDraft = false;
-  if (query.preview === "1") {
-    const session = await getAdminSession();
-    includeDraft = session.isAdmin;
-  }
-
-  const caseStudy = await getCaseStudyBySlug(slug, includeDraft);
+export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPageProps) {
+  const { slug } = await params;
+  const caseStudy = await getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     notFound();

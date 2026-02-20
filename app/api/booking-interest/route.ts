@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 
 import { sendCustomerConfirmationEmail, sendNotificationEmail } from "@/lib/email";
 import { bookingInterestSchema } from "@/lib/schemas";
-import { hasSupabaseEnv } from "@/lib/supabase/env";
-import { createSupabasePublicClient } from "@/lib/supabase/public";
 
 export async function POST(request: Request) {
   const body = await request.json();
@@ -14,30 +12,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: firstError }, { status: 400 });
   }
 
-  if (!hasSupabaseEnv) {
-    return NextResponse.json(
-      { message: "Booking fallback storage is not configured. Please add Supabase env variables." },
-      { status: 500 },
-    );
-  }
-
   const values = parsed.data;
-  const supabase = createSupabasePublicClient();
-
   const callLabel = values.callType === "free_intro" ? "Free 2-hour intro" : "Existing client paid time";
-
-  const { error } = await supabase.from("contact_submissions").insert({
-    name: values.name,
-    email: values.email,
-    company: values.company,
-    role: `Booking request: ${callLabel}`,
-    message: values.details,
-    budget_range: null,
-  });
-
-  if (error) {
-    return NextResponse.json({ message: error.message }, { status: 500 });
-  }
 
   await sendNotificationEmail({
     subject: `${callLabel} booking request from ${values.company}`,
@@ -47,6 +23,7 @@ export async function POST(request: Request) {
       <p><strong>Type:</strong> ${callLabel}</p>
       <p><strong>Name:</strong> ${values.name}</p>
       <p><strong>Email:</strong> ${values.email}</p>
+      <p><strong>Phone:</strong> ${values.phone}</p>
       <p><strong>Company:</strong> ${values.company}</p>
       <p><strong>Details:</strong></p>
       <p>${values.details}</p>
@@ -60,6 +37,7 @@ export async function POST(request: Request) {
       <p>Hi ${values.name},</p>
       <p>We received your ${callLabel.toLowerCase()} request and will follow up with next steps shortly.</p>
       <p><strong>Company:</strong> ${values.company}</p>
+      <p><strong>Phone:</strong> ${values.phone}</p>
       <p><strong>Request details:</strong></p>
       <p>${values.details}</p>
       <br />

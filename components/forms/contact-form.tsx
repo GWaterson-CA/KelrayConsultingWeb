@@ -59,6 +59,12 @@ export function ContactForm() {
         </div>
       </div>
 
+      <div className="space-y-2">
+        <Label htmlFor="phone">Phone</Label>
+        <Input id="phone" type="tel" {...register("phone")} placeholder="+1 604 555 0123" />
+        {errors.phone ? <p className="text-xs text-rose-300">{errors.phone.message}</p> : null}
+      </div>
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="company">Company</Label>

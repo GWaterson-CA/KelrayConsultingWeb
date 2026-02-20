@@ -18,7 +18,7 @@ export const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
       "Prompt library and usage playbook",
       "Team training for estimators and sales ops",
     ],
-    tools: ["OpenAI", "Supabase", "Zapier", "NetSuite API"],
+    tools: ["OpenAI", "Zapier", "NetSuite API", "Google Sheets"],
     results:
       "The team reduced quote prep bottlenecks and shipped consistent proposal packs in hours instead of days.",
     metrics: [
@@ -70,7 +70,7 @@ export const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
       "CRM workflow automation",
       "Quality checklist and governance policy",
     ],
-    tools: ["OpenAI", "HubSpot", "Supabase", "Make"],
+    tools: ["OpenAI", "HubSpot", "Make", "Notion"],
     results:
       "The firm moved from ad hoc intake to a structured, measurable process that improved speed and consistency.",
     metrics: [
@@ -114,7 +114,7 @@ export const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
       "Knowledge base indexing",
       "Manager onboarding sessions",
     ],
-    tools: ["OpenAI", "Airtable", "Supabase", "Power BI"],
+    tools: ["OpenAI", "Airtable", "Power BI", "Microsoft Teams"],
     results:
       "Managers reduced weekly admin load and clients got clearer, more consistent project updates.",
     metrics: [
@@ -166,7 +166,7 @@ export const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
       "Escalation playbook",
       "Agent training and scorecards",
     ],
-    tools: ["OpenAI", "Shopify", "Gorgias", "Supabase"],
+    tools: ["OpenAI", "Shopify", "Gorgias", "Klaviyo"],
     results:
       "Support quality improved while backlog dropped during seasonal peaks.",
     metrics: [
@@ -210,7 +210,7 @@ export const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
       "Document assistant",
       "Governance and QA controls",
     ],
-    tools: ["OpenAI", "Supabase", "Microsoft 365", "Zapier"],
+    tools: ["OpenAI", "Microsoft 365", "Zapier", "SharePoint"],
     results:
       "The brokerage processed renewals more predictably with lower admin burden and fewer deadline misses.",
     metrics: [

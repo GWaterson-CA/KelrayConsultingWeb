@@ -36,14 +36,3 @@ export type CaseStudy = {
   tags: string[];
   media: CaseStudyMedia[];
 };
-
-export type ContactSubmission = {
-  id: string;
-  name: string;
-  email: string;
-  company: string;
-  role: string;
-  message: string;
-  budget_range: string | null;
-  created_at: string;
-};
