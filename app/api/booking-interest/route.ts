@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { sendNotificationEmail } from "@/lib/email";
+import { sendCustomerConfirmationEmail, sendNotificationEmail } from "@/lib/email";
 import { bookingInterestSchema } from "@/lib/schemas";
 import { hasSupabaseEnv } from "@/lib/supabase/env";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
@@ -50,6 +50,21 @@ export async function POST(request: Request) {
       <p><strong>Company:</strong> ${values.company}</p>
       <p><strong>Details:</strong></p>
       <p>${values.details}</p>
+    `,
+  });
+
+  await sendCustomerConfirmationEmail(values.email, {
+    subject: `Booking request received | ${callLabel}`,
+    html: `
+      <h2>Thanks for your booking request</h2>
+      <p>Hi ${values.name},</p>
+      <p>We received your ${callLabel.toLowerCase()} request and will follow up with next steps shortly.</p>
+      <p><strong>Company:</strong> ${values.company}</p>
+      <p><strong>Request details:</strong></p>
+      <p>${values.details}</p>
+      <br />
+      <p>Best,</p>
+      <p>Ascent Business Solutions</p>
     `,
   });
 

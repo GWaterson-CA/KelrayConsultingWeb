@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { sendNotificationEmail } from "@/lib/email";
+import { sendCustomerConfirmationEmail, sendNotificationEmail } from "@/lib/email";
 import { contactFormSchema } from "@/lib/schemas";
 import { hasSupabaseEnv } from "@/lib/supabase/env";
 import { createSupabasePublicClient } from "@/lib/supabase/public";
@@ -49,6 +49,24 @@ export async function POST(request: Request) {
       <p><strong>Budget:</strong> ${values.budgetRange || "Not provided"}</p>
       <p><strong>Message:</strong></p>
       <p>${values.message}</p>
+    `,
+  });
+
+  await sendCustomerConfirmationEmail(values.email, {
+    subject: "We received your enquiry | Ascent Business Solutions",
+    html: `
+      <h2>Thanks for contacting Ascent Business Solutions</h2>
+      <p>Hi ${values.name},</p>
+      <p>We received your enquiry and will follow up shortly.</p>
+      <p><strong>What you sent us:</strong></p>
+      <p><strong>Company:</strong> ${values.company}</p>
+      <p><strong>Role:</strong> ${values.role}</p>
+      <p><strong>Budget:</strong> ${values.budgetRange || "Not provided"}</p>
+      <p><strong>Message:</strong></p>
+      <p>${values.message}</p>
+      <br />
+      <p>Best,</p>
+      <p>Ascent Business Solutions</p>
     `,
   });
 
