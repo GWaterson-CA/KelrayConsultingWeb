@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     `,
   });
 
-  if (!notificationResult.sent || !customerResult.sent) {
+  if (!notificationResult.sent) {
     console.error("Contact email delivery failed", {
       notificationResult,
       customerResult,
@@ -64,6 +64,13 @@ export async function POST(request: Request) {
       },
       { status: 500 },
     );
+  }
+
+  if (!customerResult.sent) {
+    console.warn("Contact confirmation email failed (non-blocking)", {
+      customerResult,
+      enquiryEmail: values.email,
+    });
   }
 
   return NextResponse.json({ message: "Thanks for reaching out. We will reply shortly." });

@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     `,
   });
 
-  if (!notificationResult.sent || !customerResult.sent) {
+  if (!notificationResult.sent) {
     console.error("Booking email delivery failed", {
       notificationResult,
       customerResult,
@@ -61,6 +61,13 @@ export async function POST(request: Request) {
       },
       { status: 500 },
     );
+  }
+
+  if (!customerResult.sent) {
+    console.warn("Booking confirmation email failed (non-blocking)", {
+      customerResult,
+      enquiryEmail: values.email,
+    });
   }
 
   return NextResponse.json({ message: "Request received. We will follow up shortly." });
