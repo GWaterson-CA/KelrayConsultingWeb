@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 import { sendCustomerConfirmationEmail, sendNotificationEmail } from "@/lib/email";
 import { bookingInterestSchema } from "@/lib/schemas";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   const body = await request.json();
   const parsed = bookingInterestSchema.safeParse(body);
@@ -15,7 +17,7 @@ export async function POST(request: Request) {
   const values = parsed.data;
   const callLabel = values.callType === "free_intro" ? "Free 2-hour intro" : "Existing client paid time";
 
-  await sendNotificationEmail({
+  const notificationResult = await sendNotificationEmail({
     subject: `${callLabel} booking request from ${values.company}`,
     replyTo: values.email,
     html: `
@@ -30,7 +32,7 @@ export async function POST(request: Request) {
     `,
   });
 
-  await sendCustomerConfirmationEmail(values.email, {
+  const customerResult = await sendCustomerConfirmationEmail(values.email, {
     subject: `Booking request received | ${callLabel}`,
     html: `
       <h2>Thanks for your booking request</h2>
@@ -45,6 +47,21 @@ export async function POST(request: Request) {
       <p>Ascent Business Solutions</p>
     `,
   });
+
+  if (!notificationResult.sent || !customerResult.sent) {
+    console.error("Booking email delivery failed", {
+      notificationResult,
+      customerResult,
+    });
+
+    return NextResponse.json(
+      {
+        message:
+          "Email delivery is not configured correctly on this environment yet. Please email geoffreywaterson@gmail.com directly.",
+      },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ message: "Request received. We will follow up shortly." });
 }

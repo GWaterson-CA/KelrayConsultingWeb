@@ -58,6 +58,8 @@ Optional (email notifications):
 - `RESEND_FROM_EMAIL`
 - `CONTACT_NOTIFY_EMAIL`
 
+If emails work locally but not on Vercel, confirm all three vars are set in Vercel for the `Production` environment and then redeploy.
+
 ## Build and quality checks
 Run:
 ```bash

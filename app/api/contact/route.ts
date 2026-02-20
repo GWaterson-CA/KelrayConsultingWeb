@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 import { sendCustomerConfirmationEmail, sendNotificationEmail } from "@/lib/email";
 import { contactFormSchema } from "@/lib/schemas";
 
+export const runtime = "nodejs";
+
 export async function POST(request: Request) {
   const body = await request.json();
   const parsed = contactFormSchema.safeParse(body);
@@ -14,7 +16,7 @@ export async function POST(request: Request) {
 
   const values = parsed.data;
 
-  await sendNotificationEmail({
+  const notificationResult = await sendNotificationEmail({
     subject: `New contact enquiry from ${values.company}`,
     replyTo: values.email,
     html: `
@@ -30,7 +32,7 @@ export async function POST(request: Request) {
     `,
   });
 
-  await sendCustomerConfirmationEmail(values.email, {
+  const customerResult = await sendCustomerConfirmationEmail(values.email, {
     subject: "We received your enquiry | Ascent Business Solutions",
     html: `
       <h2>Thanks for contacting Ascent Business Solutions</h2>
@@ -48,6 +50,21 @@ export async function POST(request: Request) {
       <p>Ascent Business Solutions</p>
     `,
   });
+
+  if (!notificationResult.sent || !customerResult.sent) {
+    console.error("Contact email delivery failed", {
+      notificationResult,
+      customerResult,
+    });
+
+    return NextResponse.json(
+      {
+        message:
+          "Email delivery is not configured correctly on this environment yet. Please email geoffreywaterson@gmail.com directly.",
+      },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ message: "Thanks for reaching out. We will reply shortly." });
 }
