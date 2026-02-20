@@ -5,6 +5,22 @@ import { contactFormSchema } from "@/lib/schemas";
 
 export const runtime = "nodejs";
 
+function buildDeliveryMessage(
+  details: { reason: "missing-config" | "send-failed"; missing?: string[]; error?: string } | null,
+) {
+  if (!details) {
+    return "Thanks for reaching out. We received your submission, but automated routing had an issue. Please also email geoffreywaterson@gmail.com so nothing is missed.";
+  }
+
+  if (details.reason === "missing-config") {
+    const missingVars = details.missing?.length ? ` Missing: ${details.missing.join(", ")}.` : "";
+    return `Thanks for reaching out. We received your submission, but Live email routing is not configured in Vercel.${missingVars} Please also email geoffreywaterson@gmail.com so nothing is missed.`;
+  }
+
+  const errorText = details.error ? ` Resend error: ${details.error}.` : "";
+  return `Thanks for reaching out. We received your submission, but Resend could not send the email from Live.${errorText} Please also email geoffreywaterson@gmail.com so nothing is missed.`;
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -58,8 +74,7 @@ export async function POST(request: Request) {
         customerResult,
       });
       return NextResponse.json({
-        message:
-          "Thanks for reaching out. We received your submission, but automated routing had an issue. Please also email geoffreywaterson@gmail.com so nothing is missed.",
+        message: buildDeliveryMessage(notificationResult),
       });
     }
 
@@ -74,8 +89,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Unhandled contact submission error", error);
     return NextResponse.json({
-      message:
-        "Thanks for reaching out. We received your submission, but email delivery is delayed. Please also email geoffreywaterson@gmail.com so nothing is missed.",
+      message: buildDeliveryMessage(null),
     });
   }
 }

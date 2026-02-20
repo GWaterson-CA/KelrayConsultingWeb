@@ -5,6 +5,22 @@ import { bookingInterestSchema } from "@/lib/schemas";
 
 export const runtime = "nodejs";
 
+function buildDeliveryMessage(
+  details: { reason: "missing-config" | "send-failed"; missing?: string[]; error?: string } | null,
+) {
+  if (!details) {
+    return "Request received. Automated routing had an issue, so please also email geoffreywaterson@gmail.com to confirm your booking.";
+  }
+
+  if (details.reason === "missing-config") {
+    const missingVars = details.missing?.length ? ` Missing: ${details.missing.join(", ")}.` : "";
+    return `Request received. Live email routing is not configured in Vercel.${missingVars} Please also email geoffreywaterson@gmail.com to confirm your booking.`;
+  }
+
+  const errorText = details.error ? ` Resend error: ${details.error}.` : "";
+  return `Request received. Resend could not send the booking email from Live.${errorText} Please also email geoffreywaterson@gmail.com to confirm your booking.`;
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -55,8 +71,7 @@ export async function POST(request: Request) {
         customerResult,
       });
       return NextResponse.json({
-        message:
-          "Request received. Automated routing had an issue, so please also email geoffreywaterson@gmail.com to confirm your booking.",
+        message: buildDeliveryMessage(notificationResult),
       });
     }
 
@@ -71,8 +86,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Unhandled booking submission error", error);
     return NextResponse.json({
-      message:
-        "Request received. We may have an email delay, so please also email geoffreywaterson@gmail.com to confirm your booking.",
+      message: buildDeliveryMessage(null),
     });
   }
 }
