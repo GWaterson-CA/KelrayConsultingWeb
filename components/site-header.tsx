@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { BRAND } from "@/lib/brand";
@@ -10,13 +11,8 @@ export function SiteHeader() {
       <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
         <div className="flex items-center justify-between">
           <Link href="/" className="inline-flex items-center gap-3 text-white">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-emerald-300/45 bg-emerald-300/15 text-sm font-semibold text-emerald-100">
-              A
-            </span>
-            <span className="text-base font-semibold tracking-tight sm:text-lg">
-              <span className="sm:hidden">{BRAND.shortName}</span>
-              <span className="hidden sm:inline">{BRAND.name}</span>
-            </span>
+            <Image src="/brand/logo.svg" alt={BRAND.name} width={42} height={42} className="h-10 w-10 object-contain" />
+            <span className="text-base font-semibold tracking-tight sm:text-lg">{BRAND.name}</span>
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             {navLinks.map((item) => (

@@ -60,6 +60,10 @@ Optional (email notifications):
 
 If emails work locally but not on Vercel, confirm all three vars are set in Vercel for the `Production` environment and then redeploy.
 
+## Brand assets
+- Header logo path: `public/brand/logo.svg` (or replace with `logo.png` and update `components/site-header.tsx`)
+- Favicon path: `app/favicon.ico`
+
 ## Build and quality checks
 Run:
 ```bash

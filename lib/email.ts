@@ -36,6 +36,13 @@ function getEmailConfig(): EmailConfigResult {
   return { apiKey, fromEmail, missing: [] };
 }
 
+function extractAddress(fromEmail: string): string | null {
+  const match = fromEmail.match(/<([^>]+)>/);
+  if (match?.[1]) return match[1].trim();
+  if (fromEmail.includes("@")) return fromEmail.trim();
+  return null;
+}
+
 export async function sendEmail(to: string, payload: EmailPayload): Promise<EmailResult> {
   const config = getEmailConfig();
 
@@ -64,13 +71,15 @@ export async function sendEmail(to: string, payload: EmailPayload): Promise<Emai
 }
 
 export async function sendNotificationEmail(payload: EmailPayload) {
-  const toEmail = process.env.CONTACT_NOTIFY_EMAIL;
+  const configuredNotifyEmail = process.env.CONTACT_NOTIFY_EMAIL;
+  const fromEmailFallback = process.env.RESEND_FROM_EMAIL ? extractAddress(process.env.RESEND_FROM_EMAIL) : null;
+  const toEmail = configuredNotifyEmail || fromEmailFallback;
 
   if (!toEmail) {
     return {
       sent: false as const,
       reason: "missing-config" as const,
-      missing: ["CONTACT_NOTIFY_EMAIL"],
+      missing: ["CONTACT_NOTIFY_EMAIL or RESEND_FROM_EMAIL"],
     };
   }
 

@@ -53,14 +53,10 @@ export async function POST(request: Request) {
       notificationResult,
       customerResult,
     });
-
-    return NextResponse.json(
-      {
-        message:
-          "Email delivery is not configured correctly on this environment yet. Please email geoffreywaterson@gmail.com directly.",
-      },
-      { status: 500 },
-    );
+    return NextResponse.json({
+      message:
+        "Request received. Automated routing had an issue, so please also email geoffreywaterson@gmail.com to confirm your booking.",
+    });
   }
 
   if (!customerResult.sent) {
