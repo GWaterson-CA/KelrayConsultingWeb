@@ -56,6 +56,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4RELDCS9R" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L4RELDCS9R');
+            `,
+          }}
+        />
+      </head>
       <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>{children}</body>
     </html>
   );
