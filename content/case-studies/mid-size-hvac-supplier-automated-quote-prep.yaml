@@ -1,0 +1,60 @@
+title: "Mid-Size HVAC Supplier Automated Quote Prep"
+summary: "Automated quote preparation and product lookup to cut estimator prep time and improve win-rate on high-volume bids."
+
+industry: "Manufacturing & Distribution"
+
+problem: |
+  Estimators were spending too much time gathering specs, checking inventory, and stitching quote documents from disconnected systems.
+
+approach: |
+  Mapped the quoting workflow, integrated ERP inventory data, and built an AI-assisted quote preparation workflow with guardrails and human approval checkpoints.
+
+deliverables:
+  - "AI capability audit and workflow map"
+  - "Quote assistant integrated with ERP"
+  - "Prompt library and usage playbook"
+  - "Team training for estimators and sales ops"
+
+tools:
+  - "OpenAI"
+  - "Zapier"
+  - "NetSuite API"
+  - "Google Sheets"
+
+results: |
+  The team reduced quote prep bottlenecks and shipped consistent proposal packs in hours instead of days.
+
+metrics:
+  - label: "Quote prep time"
+    value: "-42%"
+    outcomeType: "time_saved"
+  - label: "Quote cycle speed"
+    value: "2.1x"
+    outcomeType: "revenue_growth"
+  - label: "Missed line-item errors"
+    value: "-31%"
+    outcomeType: "risk_reduction"
+
+testimonial_quote: "We didn't need to hire another estimator. We fixed the workflow and unlocked more output from the team we already had."
+
+featured: true
+published: true
+
+tags:
+  - "automation"
+  - "quoting"
+  - "erp integration"
+
+media:
+  - type: "image"
+    url: "/images/case-study-hvac.svg"
+    alt: "Abstract dashboard illustrating automated quoting workflows"
+    sort_order: 1
+  - type: "video"
+    url: "/videos/case-loop.mp4"
+    alt: "Looping AI data flow animation"
+    sort_order: 2
+
+published_at: "2025-06-11T00:00:00.000Z"
+created_at: "2025-06-01T00:00:00.000Z"
+updated_at: "2025-06-11T00:00:00.000Z"

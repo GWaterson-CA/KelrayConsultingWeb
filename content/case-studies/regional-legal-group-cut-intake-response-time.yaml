@@ -1,0 +1,56 @@
+title: "Regional Legal Group Cut Intake Response Time"
+summary: "Built a retrieval-based intake assistant and triage process that improved lead handling and reduced manual handoffs."
+
+industry: "Professional Services"
+
+problem: |
+  Leads arrived through multiple channels, intake notes were inconsistent, and follow-up response time was hurting conversion.
+
+approach: |
+  Created an intake decision workflow with prompt-based qualification logic, CRM sync, and daily QA checks for safe responses.
+
+deliverables:
+  - "Intake process redesign"
+  - "AI assistant for first-touch responses"
+  - "CRM workflow automation"
+  - "Quality checklist and governance policy"
+
+tools:
+  - "OpenAI"
+  - "HubSpot"
+  - "Make"
+  - "Notion"
+
+results: |
+  The firm moved from ad hoc intake to a structured, measurable process that improved speed and consistency.
+
+metrics:
+  - label: "First response time"
+    value: "-67%"
+    outcomeType: "time_saved"
+  - label: "Qualified consults"
+    value: "+24%"
+    outcomeType: "revenue_growth"
+  - label: "Manual rework"
+    value: "-38%"
+    outcomeType: "cost_reduced"
+
+testimonial_quote: "Our team has fewer dropped leads and far better context before each consultation call."
+
+featured: true
+published: true
+
+tags:
+  - "intake"
+  - "crm"
+  - "llm workflow"
+
+media:
+  - type: "image"
+    url: "/images/case-study-legal.svg"
+    alt: "Workflow diagram showing AI-powered client intake"
+    sort_order: 1
+
+published_at: "2025-05-07T00:00:00.000Z"
+created_at: "2025-04-28T00:00:00.000Z"
+updated_at: "2025-05-07T00:00:00.000Z"

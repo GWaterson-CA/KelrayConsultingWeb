@@ -1,0 +1,58 @@
+# ─── Case Study Template ───────────────────────────────────────────────
+#
+# To create a new case study:
+#   1. Copy this file → your-slug-here.yaml
+#   2. The filename (minus .yaml) becomes the URL: /case-studies/your-slug-here
+#   3. Fill in every field below
+#   4. Drop images/videos in public/images/ or public/videos/
+#   5. Set published: true when ready to go live
+#   6. Commit and deploy — the site picks it up automatically
+#
+# ───────────────────────────────────────────────────────────────────────
+
+title: ""
+summary: "" # 1-2 sentence overview shown on cards and in meta descriptions
+
+industry: "" # e.g. "Manufacturing & Distribution", "Professional Services", "Retail & E-Commerce"
+
+# Use | for multi-line content. Markdown formatting is supported.
+problem: |
+  Describe the client's challenge here.
+
+approach: |
+  Describe the solution approach here.
+
+deliverables:
+  - "Deliverable one"
+  - "Deliverable two"
+
+tools:
+  - "Tool one"
+  - "Tool two"
+
+results: |
+  Describe the measurable outcomes here.
+
+metrics:
+  - label: "Metric name"        # e.g. "Quote prep time"
+    value: "-XX%"                # e.g. "-42%", "2.1x", "+24%"
+    outcomeType: "time_saved"    # time_saved | cost_reduced | revenue_growth | risk_reduction
+
+testimonial_quote: null # or "Client quote here"
+
+featured: false  # true to show on homepage carousel (max 3)
+published: false # true to make publicly visible
+
+tags:
+  - "tag-one"
+
+media:
+  - type: "image"                          # image | video
+    url: "/images/case-study-default.svg"  # path relative to public/
+    alt: "Description of the image"
+    sort_order: 1
+
+# ISO 8601 dates
+published_at: null
+created_at: "2026-01-01T00:00:00.000Z"
+updated_at: "2026-01-01T00:00:00.000Z"

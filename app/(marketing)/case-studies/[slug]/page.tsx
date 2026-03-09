@@ -7,8 +7,13 @@ import { AnimatedSection } from "@/components/animated-section";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { BRAND } from "@/lib/brand";
-import { getCaseStudyBySlug } from "@/lib/data";
+import { getCaseStudyBySlug, getPublishedCaseStudies } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
+
+export async function generateStaticParams() {
+  const caseStudies = await getPublishedCaseStudies();
+  return caseStudies.map((cs) => ({ slug: cs.slug }));
+}
 
 type CaseStudyDetailPageProps = {
   params: Promise<{ slug: string }>;

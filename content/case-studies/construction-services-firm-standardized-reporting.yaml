@@ -1,0 +1,60 @@
+title: "Construction Services Firm Standardized Reporting"
+summary: "Unified project reporting and internal knowledge retrieval to improve delivery confidence across project managers."
+
+industry: "Construction"
+
+problem: |
+  Project updates, safety notes, and client reports were fragmented across spreadsheets and chat threads.
+
+approach: |
+  Implemented a central data workflow and generated standardized report outputs from structured templates and field data.
+
+deliverables:
+  - "Data workflow architecture"
+  - "Template-driven reporting automation"
+  - "Knowledge base indexing"
+  - "Manager onboarding sessions"
+
+tools:
+  - "OpenAI"
+  - "Airtable"
+  - "Power BI"
+  - "Microsoft Teams"
+
+results: |
+  Managers reduced weekly admin load and clients got clearer, more consistent project updates.
+
+metrics:
+  - label: "Weekly reporting time"
+    value: "-11 hrs/wk"
+    outcomeType: "time_saved"
+  - label: "Status escalation incidents"
+    value: "-29%"
+    outcomeType: "risk_reduction"
+  - label: "Operational overhead"
+    value: "-18%"
+    outcomeType: "cost_reduced"
+
+testimonial_quote: "The reporting process finally feels like a system instead of heroics."
+
+featured: true
+published: true
+
+tags:
+  - "internal tooling"
+  - "reporting"
+  - "knowledge base"
+
+media:
+  - type: "image"
+    url: "/images/case-study-construction.svg"
+    alt: "Data dashboard with construction project analytics"
+    sort_order: 1
+  - type: "video"
+    url: "/videos/case-loop.mp4"
+    alt: "Looping system dashboard animation"
+    sort_order: 2
+
+published_at: "2025-03-18T00:00:00.000Z"
+created_at: "2025-03-01T00:00:00.000Z"
+updated_at: "2025-03-18T00:00:00.000Z"

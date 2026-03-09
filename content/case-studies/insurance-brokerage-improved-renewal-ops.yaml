@@ -1,0 +1,56 @@
+title: "Insurance Brokerage Improved Renewal Ops"
+summary: "Introduced AI-assisted renewal checklists and document prep to reduce compliance risk and admin burden."
+
+industry: "Insurance"
+
+problem: |
+  Renewal specialists were overloaded by repetitive document review and deadline coordination.
+
+approach: |
+  Designed a staged AI workflow with review checkpoints, policy comparisons, and automatic reminder triggers.
+
+deliverables:
+  - "Renewal process redesign"
+  - "Checklist automation"
+  - "Document assistant"
+  - "Governance and QA controls"
+
+tools:
+  - "OpenAI"
+  - "Microsoft 365"
+  - "Zapier"
+  - "SharePoint"
+
+results: |
+  The brokerage processed renewals more predictably with lower admin burden and fewer deadline misses.
+
+metrics:
+  - label: "Renewal prep time"
+    value: "-33%"
+    outcomeType: "time_saved"
+  - label: "Compliance exceptions"
+    value: "-27%"
+    outcomeType: "risk_reduction"
+  - label: "Ops cost"
+    value: "-14%"
+    outcomeType: "cost_reduced"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "compliance"
+  - "insurance"
+  - "automation"
+
+media:
+  - type: "image"
+    url: "/images/case-study-insurance.svg"
+    alt: "Renewal operations workflow graphic"
+    sort_order: 1
+
+published_at: "2025-09-09T00:00:00.000Z"
+created_at: "2025-08-25T00:00:00.000Z"
+updated_at: "2025-09-09T00:00:00.000Z"

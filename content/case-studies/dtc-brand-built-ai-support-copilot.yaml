@@ -1,0 +1,56 @@
+title: "DTC Brand Built AI Support Copilot"
+summary: "Deployed a support copilot for agents to resolve repetitive tickets and draft high-quality responses faster."
+
+industry: "E-commerce"
+
+problem: |
+  Support agents were repeating policy lookups and response drafting, causing backlog and response inconsistency.
+
+approach: |
+  Built a support copilot with knowledge retrieval, policy prompts, and escalation routes for sensitive issues.
+
+deliverables:
+  - "Support workflow audit"
+  - "Copilot interface and retrieval layer"
+  - "Escalation playbook"
+  - "Agent training and scorecards"
+
+tools:
+  - "OpenAI"
+  - "Shopify"
+  - "Gorgias"
+  - "Klaviyo"
+
+results: |
+  Support quality improved while backlog dropped during seasonal peaks.
+
+metrics:
+  - label: "Average handling time"
+    value: "-36%"
+    outcomeType: "time_saved"
+  - label: "Ticket backlog"
+    value: "-44%"
+    outcomeType: "cost_reduced"
+  - label: "CSAT"
+    value: "+11 pts"
+    outcomeType: "revenue_growth"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "support"
+  - "knowledge retrieval"
+  - "operations"
+
+media:
+  - type: "image"
+    url: "/images/case-study-dtc.svg"
+    alt: "Customer support operations dashboard"
+    sort_order: 1
+
+published_at: "2025-08-02T00:00:00.000Z"
+created_at: "2025-07-20T00:00:00.000Z"
+updated_at: "2025-08-02T00:00:00.000Z"

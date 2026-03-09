@@ -19,7 +19,7 @@ export default async function CaseStudiesPage() {
         <SectionHeading
           badge="Case studies"
           title="Real workflow transformations with measurable outcomes"
-          description="These are placeholder examples for now. Replace with real project stories and metrics as they become available."
+          description="Selected engagements showing how we approach real workflow challenges."
         />
       </AnimatedSection>
 
