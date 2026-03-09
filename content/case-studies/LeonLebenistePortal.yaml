@@ -1,0 +1,69 @@
+title: "Leon Lebeniste Distribution Portal"
+summary: "Ascent Business Solutions designed and delivered a custom ordering portal for Leon Lebeniste’s exclusive distribution network, enabling approved buyers to order custom-built products through a structured, pre-approved purchasing workflow. A fully working prototype was available within two business days, with the platform ready to go live within a week."
+
+industry: "Manufacturing & Distribution"
+
+problem: |
+  Leon Lebeniste needed a better way for its exclusive distribution network to order products that were custom built for each order. The existing process required a system that could reflect a tailored product range, apply unique bulk-order discounts, and support a pre-approved purchasing workflow that matched the company’s internal sales and approval process.
+
+  Off-the-shelf e-commerce tools were not well suited to this requirement, as the ordering flow needed to be more controlled than a standard online store. The business needed a portal that would make ordering easier for distributors while ensuring orders followed the correct process from selection through to approval and submission.
+
+approach: |
+  Ascent Business Solutions worked closely with Leon Lebeniste to rapidly design and build a custom portal tailored to the needs of its distribution network. The system was structured around a custom-built ordering flow, allowing distributors to access the relevant product range, view bulk pricing discounts, and place orders in line with an approved purchasing process.
+
+  Speed was a key priority. A fully working prototype was delivered within two business days so the client could begin testing the system immediately and provide feedback early in the process. This allowed revisions to be made quickly, reduced project risk, and ensured the final portal aligned with the client’s operational requirements.
+
+  The result was a practical, user-friendly ordering portal that could be deployed quickly, supported custom-built products, and gave Leon Lebeniste a more efficient and scalable way to manage distributor ordering.
+
+deliverables:
+  - "Custom distributor ordering portal"
+  - "Tailored product catalogue for custom-built products"
+  - "Bulk discount logic built into the ordering process"
+  - "Pre-approved purchasing workflow"
+  - "Working prototype for live testing and revision"
+  - "User documentation for portal users at delivery"
+
+tools:
+  - "Custom web application development"
+  - "Workflow design"
+  - "Order logic configuration"
+  - "User documentation"
+  - "Rapid prototyping"
+
+results: |
+  Leon Lebeniste received a fully working prototype within two business days, allowing its team to begin testing almost immediately and accelerate decision-making. The solution was refined quickly and was ready to go live within one week.
+
+  The completed portal gave the exclusive distribution network a more structured and efficient way to place orders for custom-built products, while ensuring pricing rules and purchasing approvals were followed consistently. By combining rapid delivery with tailored workflow design, Ascent Business Solutions helped Leon Lebeniste move from concept to launch-ready platform in a matter of days.
+
+metrics:
+  - label: "Prototype delivery time"
+    value: "2 business days"
+    outcomeType: "time_saved"
+  - label: "Go-live readiness"
+    value: "Within 1 week"
+    outcomeType: "time_saved"
+  - label: "User documentation availability"
+    value: "At delivery"
+    outcomeType: "risk_reduction"
+
+testimonial_quote: null
+
+featured: false
+published: false
+
+tags:
+  - "custom-portal"
+  - "distribution"
+  - "ordering-workflow"
+  - "manufacturing"
+  - "rapid-prototyping"
+
+media:
+  - type: "image"
+    url: "/images/case-study-LL-Portal.png"
+    alt: "Leon Lebeniste custom distribution portal case study"
+    sort_order: 1
+
+published_at: true
+created_at: "2026-01-01T00:00:00.000Z"
+updated_at: "2026-03-08T00:00:00.000Z"
