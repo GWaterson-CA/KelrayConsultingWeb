@@ -4,7 +4,7 @@ export const BRAND = {
   domain: "ascentbusinesssolutions.ca",
   siteUrl: "https://ascentbusinesssolutions.ca",
   email: "hello@ascentbusinesssolutions.ca",
-  tagline: "Pragmatic AI consulting and workflow systems for business owners and teams.",
+  tagline: "Your outsourced AI specialist — custom tools, team training, and hands-on implementation.",
   description:
-    "Ascent Business Solutions helps organizations turn AI from scattered experiments into measurable operational gains.",
+    "Ascent Business Solutions is the AI partner for businesses that want custom tools, confident teams, and real results — without hiring a full-time AI specialist.",
 };

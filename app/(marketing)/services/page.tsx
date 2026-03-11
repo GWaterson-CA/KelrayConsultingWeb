@@ -9,47 +9,53 @@ import { Card } from "@/components/ui/card";
 import { services } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Services",
-  description: "AI consulting, staff training, automation delivery, and custom AI solution builds for business teams.",
+  title: "AI Services — Custom Tools, Team Training & Automation",
+  description:
+    "Custom AI tool development, hands-on team training, process automation, and strategic consulting for businesses that want results without hiring full-time AI staff.",
+  alternates: { canonical: "/services" },
 };
 
 const engagementOptions = [
   {
     title: "Strategy Workshop",
-    outcome: "Clear AI roadmap in 1-2 weeks",
-    deliverables: "Capability review, opportunity map, implementation priorities, and governance baseline.",
-    useCase: "Best for leadership teams deciding where to invest first.",
+    outcome: "A clear AI roadmap in 1-2 weeks",
+    deliverables: "We review your operations, identify the best AI opportunities, and give you a prioritized action plan you can start on immediately.",
+    useCase: "Best if you know AI could help but aren't sure where to start.",
   },
   {
-    title: "Retainer Partnership",
-    outcome: "Ongoing optimization and delivery support",
-    deliverables: "Monthly execution cycles, training refreshers, workflow monitoring, and iteration planning.",
-    useCase: "Best for teams rolling out AI across multiple departments.",
+    title: "Ongoing Partnership",
+    outcome: "A dedicated AI specialist working with your team",
+    deliverables: "Monthly implementation cycles, team training sessions, and continuous improvement — like having an AI department without the overhead.",
+    useCase: "Best if you want to roll out AI across your business over time.",
   },
   {
-    title: "Project-Based Build",
-    outcome: "Specific workflow/tool shipped end-to-end",
-    deliverables: "Technical design, implementation, integrations, QA, and handoff documentation.",
-    useCase: "Best for one high-value process needing rapid transformation.",
+    title: "Project Build",
+    outcome: "A specific tool or automation, built and delivered",
+    deliverables: "We design, build, test, and hand off a working solution — including training your team to use and maintain it.",
+    useCase: "Best if you have a specific problem you want solved with AI.",
   },
 ];
 
 const faqs = [
   {
-    q: "How quickly can we start seeing business impact?",
-    a: "Most clients see early gains during the pilot phase, often within 2-6 weeks depending on process complexity and system access.",
+    q: "How quickly will we see results?",
+    a: "Most clients see tangible value within 2-6 weeks. We start with a quick pilot so you get a real win early on before committing to anything bigger.",
   },
   {
-    q: "Do you only work with technical teams?",
-    a: "No. We work with operators, managers, and frontline staff. The goal is practical adoption, not technical theater.",
+    q: "Do we need technical staff to work with you?",
+    a: "Not at all. We work directly with business owners, managers, and front-line teams. You don't need any AI expertise — that's what we bring.",
   },
   {
-    q: "Can you train our staff, not just build tools?",
-    a: "Yes. Training is part of every engagement so your team can operate and improve workflows after rollout.",
+    q: "Can you just train our team without building tools?",
+    a: "Absolutely. Training-only engagements are one of our most popular options. We tailor workshops to each role so everyone learns what's relevant to their actual work.",
   },
   {
-    q: "What if we have strict compliance requirements?",
-    a: "We can design workflows with guardrails, approval gates, and logging requirements aligned with your risk profile.",
+    q: "What size of business do you work with?",
+    a: "Typically 5 to 500 employees. We're a great fit for businesses too small for a dedicated AI hire but big enough that manual work is costing you real money.",
+  },
+  {
+    q: "What if we've already tried AI tools and they didn't stick?",
+    a: "That's one of the most common situations we see. Usually the tools weren't connected to real workflows or the team wasn't trained properly. We fix both.",
   },
 ];
 
@@ -59,8 +65,8 @@ export default function ServicesPage() {
       <AnimatedSection>
         <SectionHeading
           badge="Services"
-          title="From AI strategy to shipped workflows and trained teams."
-          description="We support businesses through the full implementation lifecycle with pragmatic, outcome-focused execution."
+          title="Everything you'd want from an AI specialist on your team."
+          description="Whether you need one custom tool or a full AI rollout, we handle the technical work while keeping your team in the loop and in control."
         />
       </AnimatedSection>
 
@@ -79,9 +85,9 @@ export default function ServicesPage() {
       <section className="mt-20">
         <AnimatedSection>
           <SectionHeading
-            badge="Engagement options"
-            title="Flexible ways to work together"
-            description="Choose the engagement model based on urgency, internal capacity, and desired depth of implementation."
+            badge="Ways to work together"
+            title="Pick the approach that fits your business"
+            description="No long-term contracts required. Start small or go all-in — whatever makes sense for where you are right now."
           />
         </AnimatedSection>
 
@@ -117,9 +123,9 @@ export default function ServicesPage() {
       </section>
 
       <AnimatedSection className="mt-16 rounded-3xl border border-emerald-300/30 bg-gradient-to-r from-emerald-500/20 to-amber-500/20 p-8">
-        <h2 className="text-3xl font-semibold text-white">Start with a free 2-hour intro session.</h2>
+        <h2 className="text-3xl font-semibold text-white">Not sure where to start? That&apos;s literally what the intro is for.</h2>
         <p className="mt-3 text-slate-200">
-          {`We'll review your current AI usage, identify high-leverage opportunities, and suggest a practical next step.`}
+          Book a free 2-hour session. We&apos;ll look at your business, show you where AI can help, and give you a clear next step — no commitment required.
         </p>
         <Button asChild className="mt-6">
           <Link href="/book">Book now</Link>

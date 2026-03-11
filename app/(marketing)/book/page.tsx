@@ -6,8 +6,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Book",
-  description: `Book a free intro call or paid client session with ${BRAND.name}.`,
+  title: "Book a Free AI Consultation — 2-Hour Intro Session",
+  description:
+    "Book a free 2-hour intro with Ascent Business Solutions. We'll review your current setup, show you what AI can do for your business, and give you a clear next step.",
+  alternates: { canonical: "/book" },
 };
 
 const freeIntroEmbed = process.env.NEXT_PUBLIC_FREE_INTRO_CALENDAR_EMBED;

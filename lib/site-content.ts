@@ -23,47 +23,47 @@ export const services = [
     icon: Radar,
     title: "AI Capability Review",
     description:
-      "We audit workflows, tools, and bottlenecks to identify where AI can move the needle on speed, quality, and margin.",
+      "We look at how your business runs today and pinpoint exactly where AI will save the most time and money. You get a clear plan, not a generic report.",
   },
   {
     icon: GraduationCap,
-    title: "Team Training",
+    title: "Team Training & Workshops",
     description:
-      "Practical workshops for leadership and staff on prompting, workflow design, and governance inside real business use cases.",
+      "Hands-on sessions tailored to each role — managers, operations, front-line staff. Your team learns to use AI confidently in their actual day-to-day work.",
   },
   {
     icon: Workflow,
     title: "Process Automation",
     description:
-      "Automate repetitive internal processes using LLM workflows, task orchestration, and reliable handoff checkpoints.",
+      "We take the repetitive tasks your team dreads and automate them — quoting, data entry, reporting, follow-ups — so your people can focus on higher-value work.",
   },
   {
     icon: BriefcaseBusiness,
     title: "Custom AI Tools",
     description:
-      "Build fit-for-purpose internal tools that align with how your team already operates instead of forcing a new stack.",
+      "The tools you've always wished existed but couldn't find off the shelf. We build them to fit how your team already works, not the other way around.",
   },
   {
     icon: Puzzle,
     title: "Systems Integration",
     description:
-      "Connect CRM, ERP, support, and data systems so AI outputs can actually trigger useful downstream actions.",
+      "Connect your existing software — CRM, accounting, project management — so information flows automatically and AI can work across your whole business.",
   },
   {
     icon: Database,
-    title: "Data Workflows",
+    title: "Data & Reporting",
     description:
-      "Design clean data paths and governance so AI has reliable context, traceability, and measurable business outcomes.",
+      "Get your business data organized so AI actually has something useful to work with. Better data in means better decisions out.",
   },
 ];
 
 export const processTimeline = [
-  { title: "Discover", detail: "Map the current state, constraints, and high-value opportunities." },
-  { title: "Recommend", detail: "Prioritized roadmap with outcomes, risks, and implementation options." },
-  { title: "Pilot", detail: "Fast proof-of-value in one process or team with clear success criteria." },
-  { title: "Implement", detail: "Production rollout with integrations, governance, and team ownership." },
-  { title: "Train", detail: "Hands-on enablement for staff and management with role-specific workflows." },
-  { title: "Iterate", detail: "Continuous optimization using performance metrics and user feedback." },
+  { title: "Discover", detail: "We learn how your business works, what's eating up time, and where the biggest opportunities are." },
+  { title: "Recommend", detail: "You get a clear roadmap of what to do first, what it'll cost, and what results to expect." },
+  { title: "Pilot", detail: "We start with one quick win so you can see real value before committing to anything bigger." },
+  { title: "Build", detail: "We build and connect the tools, automations, and workflows your team needs." },
+  { title: "Train", detail: "Your team gets hands-on training so they're confident using everything we've built." },
+  { title: "Improve", detail: "We keep optimizing based on what's working and what your team is telling us." },
 ];
 
 export type TrustedTeam = {
@@ -130,17 +130,17 @@ export const testimonials = [
 export const values = [
   {
     icon: Sparkles,
-    title: "Business-First AI",
-    description: "We optimize for measurable business outcomes, not novelty demos.",
+    title: "Your business comes first",
+    description: "We focus on what saves you time and money — not on shiny demos or buzzwords.",
   },
   {
     icon: Building2,
-    title: "Embedded Partnership",
-    description: "We work like an extension of your team and design around your constraints.",
+    title: "We work like part of your team",
+    description: "We learn your business, work within your constraints, and design around how your people actually operate.",
   },
   {
     icon: Bot,
-    title: "Practical Adoption",
-    description: "Solutions are built for maintainability, handoff, and long-term internal ownership.",
+    title: "Built to last, not to depend on us",
+    description: "Everything we build is designed so your team can own, use, and improve it after we hand it off.",
   },
 ];

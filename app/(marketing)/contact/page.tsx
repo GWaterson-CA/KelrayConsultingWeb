@@ -6,8 +6,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: `Contact ${BRAND.name} about AI strategy, training, and implementation support.`,
+  title: "Contact Us — Talk to an AI Specialist",
+  description:
+    "Get in touch with Ascent Business Solutions about custom AI tools, team training, or exploring what AI can do for your business. We respond within one business day.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

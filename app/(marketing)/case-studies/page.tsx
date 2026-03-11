@@ -6,8 +6,10 @@ import { SectionHeading } from "@/components/section-heading";
 import { getPublishedCaseStudies } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Case Studies",
-  description: "Case studies and project snapshots from AI consulting and implementation engagements.",
+  title: "Case Studies — Real AI Projects with Measurable Results",
+  description:
+    "See how businesses use custom AI tools, automation, and training to cut costs, save time, and improve operations. Real projects with real outcomes.",
+  alternates: { canonical: "/case-studies" },
 };
 
 export default async function CaseStudiesPage() {

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -24,84 +25,155 @@ export default async function HomePage() {
     areaServed: "North America",
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    provider: {
+      "@type": "Organization",
+      name: BRAND.name,
+    },
+    serviceType: "AI Consulting and Implementation",
+    description:
+      "Custom AI tool development, team training, and business process automation for companies without dedicated AI staff.",
+    areaServed: "North America",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "AI Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom AI Tool Development" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Team Training & Workshops" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Strategy & Capability Review" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Business Process Automation" } },
+      ],
+    },
+  };
+
   return (
     <div className="pb-24">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
+      {/* Hero */}
       <section className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:pt-24">
         <AnimatedSection className="space-y-8">
           <p className="inline-flex rounded-full border border-emerald-300/30 bg-emerald-300/10 px-4 py-1 text-sm font-medium text-emerald-100">
-            Ascent Business Solutions
+            Your outsourced AI specialist
           </p>
           <h1 className="text-balance text-5xl font-semibold leading-tight text-white md:text-6xl">
-            Turn AI potential into measurable business performance.
+            Custom AI tools and training built around your business.
           </h1>
           <p className="max-w-xl text-lg text-slate-300">
-            We help owners and operations teams move from AI experiments to real systems that reduce manual work, speed delivery, and
-            improve margins.
+            Most businesses don&apos;t have a dedicated AI person — and they shouldn&apos;t need one. We work alongside
+            your team to build the tools you&apos;ve always wanted, train your staff to use AI with confidence, and find
+            the opportunities you haven&apos;t spotted yet.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg">
               <Link href="/book">
-                Book free 2-hour intro
+                Book a free 2-hour intro
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/case-studies">View case studies</Link>
+              <Link href="/case-studies">See what we&apos;ve built</Link>
             </Button>
           </div>
           <div className="grid gap-3 text-sm text-slate-300 sm:grid-cols-2">
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-300" />
-              AI capability review and strategy roadmap
+              Custom tools that fit how you already work
             </p>
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-300" />
-              Team training with role-specific playbooks
+              Hands-on AI training for your whole team
             </p>
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-300" />
-              Automation and custom internal tools
+              Discover what AI can actually do for you
             </p>
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-300" />
-              Specialist implementation without full-time hiring
+              Expert help without a full-time hire
             </p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.15}>
-          <div className="video-shell relative overflow-hidden rounded-3xl border border-white/10">
-            <video
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/50">
+            <Image
+              src="/images/hero-business.svg"
+              alt="AI dashboard showing workflow efficiency, team confidence, and hours saved through custom business automation tools"
+              width={800}
+              height={600}
               className="h-full min-h-[480px] w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster="/images/video-poster-hero.svg"
-            >
-              <source src="/videos/hero-loop.mp4" type="video/mp4" />
-            </video>
+              priority
+            />
           </div>
         </AnimatedSection>
       </section>
 
+      {/* Social proof */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <AnimatedSection>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Trusted by growth-focused teams</p>
+          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+            Trusted by business owners and their teams
+          </p>
           <div className="mt-8">
             <TrustedTeamsMarquee teams={trustedTeams} />
           </div>
         </AnimatedSection>
       </section>
 
+      {/* The problem we solve */}
+      <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
+        <AnimatedSection>
+          <SectionHeading
+            badge="The reality"
+            title="Your team is curious about AI — but nobody owns it yet."
+            description="You know AI could save time and money. Some staff are experimenting, but nobody is connecting the dots between what's possible and what your business actually needs. That's where we come in."
+          />
+        </AnimatedSection>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <AnimatedSection delay={0.04}>
+            <Card className="h-full">
+              <p className="text-3xl font-semibold text-emerald-200">01</p>
+              <h3 className="mt-4 text-xl font-semibold text-white">You want custom tools</h3>
+              <p className="mt-3 text-sm text-slate-300">
+                Off-the-shelf software never quite fits. We build AI-powered tools designed around your specific
+                workflows, data, and team — so they actually get used.
+              </p>
+            </Card>
+          </AnimatedSection>
+          <AnimatedSection delay={0.08}>
+            <Card className="h-full">
+              <p className="text-3xl font-semibold text-emerald-200">02</p>
+              <h3 className="mt-4 text-xl font-semibold text-white">You need your team trained</h3>
+              <p className="mt-3 text-sm text-slate-300">
+                AI is only useful if people know how to use it well. We run practical workshops tailored to each
+                role — leadership, operations, front-line staff — so everyone gets confident fast.
+              </p>
+            </Card>
+          </AnimatedSection>
+          <AnimatedSection delay={0.12}>
+            <Card className="h-full">
+              <p className="text-3xl font-semibold text-emerald-200">03</p>
+              <h3 className="mt-4 text-xl font-semibold text-white">You want to explore what&apos;s possible</h3>
+              <p className="mt-3 text-sm text-slate-300">
+                You suspect AI could transform parts of your business but you&apos;re not sure where to start. We map
+                your operations and show you exactly where AI creates the biggest wins.
+              </p>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Services */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <AnimatedSection>
           <SectionHeading
             badge="What we do"
-            title="Consulting and implementation built for operators, not hype."
-            description="Clients engage us for strategy, delivery, or both depending on internal team bandwidth and timeline."
+            title="Everything you need from an AI specialist — without hiring one."
+            description="Whether you need a single custom tool or a full AI strategy, we handle the technical work so you can focus on running your business."
           />
         </AnimatedSection>
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -117,12 +189,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Process */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <AnimatedSection>
           <SectionHeading
             badge="How we work"
-            title="A practical delivery model from discovery to adoption"
-            description="We keep execution clear, measurable, and aligned with business outcomes from day one."
+            title="From first conversation to tools your team actually uses"
+            description="We keep things simple, practical, and focused on your results — not ours."
           />
         </AnimatedSection>
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -138,12 +211,13 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Featured projects */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <AnimatedSection>
           <SectionHeading
-            badge="Featured projects"
-            title="Selected engagements with measurable outcomes"
-            description="Live case studies will be expanded over time as new implementation milestones are completed."
+            badge="Real results"
+            title="Tools and systems we've built for businesses like yours"
+            description="Every project starts with a real business problem. Here's what we've delivered."
           />
         </AnimatedSection>
         <div className="mt-10">
@@ -151,9 +225,10 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials */}
       <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
         <AnimatedSection>
-          <SectionHeading badge="Testimonials" title="What clients say" align="center" />
+          <SectionHeading badge="From our clients" title="What business owners and their teams say" align="center" />
         </AnimatedSection>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
@@ -167,12 +242,14 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10">
         <AnimatedSection>
           <div className="rounded-3xl border border-emerald-300/30 bg-gradient-to-r from-emerald-500/20 via-emerald-500/10 to-amber-500/15 p-10">
-            <h2 className="text-3xl font-semibold text-white">Ready to scale AI usage with confidence?</h2>
+            <h2 className="text-3xl font-semibold text-white">Ready to put AI to work in your business?</h2>
             <p className="mt-3 max-w-3xl text-slate-200">
-              Work with Ascent Business Solutions to design, implement, and operationalize the systems your team can actually maintain.
+              Book a free 2-hour intro session. We&apos;ll review what you&apos;re doing now, show you what&apos;s
+              possible, and give you a clear next step — no pressure, no jargon.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild>

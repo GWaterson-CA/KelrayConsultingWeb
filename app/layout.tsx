@@ -19,33 +19,36 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || BRAND.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   title: {
-    default: `${BRAND.name} | AI Strategy, Training, and Automation`,
+    default: `${BRAND.name} | AI Consulting, Custom Tools & Team Training for Business`,
     template: `%s | ${BRAND.name}`,
   },
   description:
-    "Ascent Business Solutions delivers practical AI consulting: capability reviews, team training, process automation, and custom business tools.",
+    "Your outsourced AI specialist. Ascent Business Solutions builds custom AI tools, trains your team, and helps you explore what AI can actually do for your business.",
   openGraph: {
-    title: BRAND.name,
+    title: `${BRAND.name} — Your Outsourced AI Specialist`,
     description:
-      "Operational AI for real businesses. We redesign processes, train teams, and implement measurable systems.",
+      "Custom AI tools, team training, and hands-on implementation for businesses that want to use AI but don't have dedicated AI staff.",
     url: siteUrl,
     siteName: BRAND.name,
     type: "website",
     images: [
       {
-        url: "/images/og-cover.svg",
+        url: "/images/og-cover.png",
         width: 1200,
         height: 630,
-        alt: BRAND.name,
+        alt: `${BRAND.name} — AI Consulting, Custom Tools & Team Training`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: BRAND.name,
-    description: BRAND.tagline,
-    images: ["/images/og-cover.svg"],
+    title: `${BRAND.name} — Your Outsourced AI Specialist`,
+    description: "Custom AI tools, team training, and business automation. No full-time hire needed.",
+    images: ["/images/og-cover.png"],
   },
 };
 
