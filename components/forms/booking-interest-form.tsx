@@ -52,9 +52,9 @@ export function BookingInterestForm({ callType, title, description }: BookingInt
   }
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <p className="mt-2 text-sm text-slate-300">{description}</p>
+    <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-6">
+      <h3 className="text-xl font-semibold text-slate-900">{title}</h3>
+      <p className="mt-2 text-sm text-slate-600">{description}</p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="mt-5 space-y-4">
         <input type="hidden" value={callType} {...register("callType")} />
@@ -63,25 +63,25 @@ export function BookingInterestForm({ callType, title, description }: BookingInt
           <div className="space-y-2">
             <Label htmlFor={`${callType}-name`}>Name</Label>
             <Input id={`${callType}-name`} {...register("name")} />
-            {errors.name ? <p className="text-xs text-rose-300">{errors.name.message}</p> : null}
+            {errors.name ? <p className="text-xs text-rose-500">{errors.name.message}</p> : null}
           </div>
           <div className="space-y-2">
             <Label htmlFor={`${callType}-email`}>Email</Label>
             <Input id={`${callType}-email`} type="email" {...register("email")} />
-            {errors.email ? <p className="text-xs text-rose-300">{errors.email.message}</p> : null}
+            {errors.email ? <p className="text-xs text-rose-500">{errors.email.message}</p> : null}
           </div>
         </div>
 
         <div className="space-y-2">
           <Label htmlFor={`${callType}-phone`}>Phone</Label>
           <Input id={`${callType}-phone`} type="tel" {...register("phone")} />
-          {errors.phone ? <p className="text-xs text-rose-300">{errors.phone.message}</p> : null}
+          {errors.phone ? <p className="text-xs text-rose-500">{errors.phone.message}</p> : null}
         </div>
 
         <div className="space-y-2">
           <Label htmlFor={`${callType}-company`}>Company</Label>
           <Input id={`${callType}-company`} {...register("company")} />
-          {errors.company ? <p className="text-xs text-rose-300">{errors.company.message}</p> : null}
+          {errors.company ? <p className="text-xs text-rose-500">{errors.company.message}</p> : null}
         </div>
 
         <div className="space-y-2">
@@ -91,7 +91,7 @@ export function BookingInterestForm({ callType, title, description }: BookingInt
             {...register("details")}
             placeholder="Share the outcomes you want, timeline, and preferred call slots."
           />
-          {errors.details ? <p className="text-xs text-rose-300">{errors.details.message}</p> : null}
+          {errors.details ? <p className="text-xs text-rose-500">{errors.details.message}</p> : null}
         </div>
 
         <Button type="submit" disabled={isSubmitting}>
@@ -100,7 +100,7 @@ export function BookingInterestForm({ callType, title, description }: BookingInt
         </Button>
 
         {status ? (
-          <p className={status.ok ? "text-sm text-emerald-300" : "text-sm text-rose-300"}>{status.message}</p>
+          <p className={status.ok ? "text-sm text-emerald-600" : "text-sm text-rose-500"}>{status.message}</p>
         ) : null}
       </form>
     </div>

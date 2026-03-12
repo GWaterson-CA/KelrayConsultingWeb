@@ -36,13 +36,13 @@ export default function AboutPage() {
       <section className="mt-10 grid gap-6 lg:grid-cols-2">
         <AnimatedSection>
           <Card className="h-full">
-            <h2 className="text-2xl font-semibold text-white">Why we exist</h2>
-            <p className="mt-4 text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-900">Why we exist</h2>
+            <p className="mt-4 text-slate-600">
               {BRAND.name} was founded after watching too many businesses buy AI tools that never got used, or have staff
               dabbling with ChatGPT without any real strategy behind it. The problem was never the technology — it was the
               gap between what AI can do and what businesses actually need it to do.
             </p>
-            <p className="mt-4 text-slate-300">
+            <p className="mt-4 text-slate-600">
               We bridge that gap. We build custom tools that fit your workflows, train your team to use AI confidently, and
               help you discover opportunities you didn&apos;t know existed — all without you needing to hire a full-time AI specialist.
             </p>
@@ -51,13 +51,13 @@ export default function AboutPage() {
 
         <AnimatedSection delay={0.08}>
           <Card className="h-full">
-            <h2 className="text-2xl font-semibold text-white">How we&apos;re different</h2>
-            <p className="mt-4 text-slate-300">
+            <h2 className="text-2xl font-semibold text-slate-900">How we&apos;re different</h2>
+            <p className="mt-4 text-slate-600">
               We&apos;re not a big consultancy that sells you a report and walks away. We&apos;re a small, focused team of
               people who build things, train people, and stick around to make sure everything works. Think of us as your
               outsourced AI department.
             </p>
-            <p className="mt-4 text-slate-300">
+            <p className="mt-4 text-slate-600">
               We assemble the right specialists for your specific industry and needs, so you get focused expertise without
               paying for overhead you don&apos;t need.
             </p>
@@ -72,9 +72,9 @@ export default function AboutPage() {
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {skills.map((skill, index) => (
             <AnimatedSection key={skill.label} delay={index * 0.05}>
-              <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4">
-                <span className="text-slate-100">{skill.label}</span>
-                <span className="rounded-full border border-emerald-300/40 bg-emerald-300/10 px-3 py-1 text-xs text-emerald-100">{skill.level}</span>
+              <div className="flex items-center justify-between rounded-2xl border border-slate-200 bg-white shadow-sm px-5 py-4">
+                <span className="text-slate-700">{skill.label}</span>
+                <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs text-blue-700">{skill.level}</span>
               </div>
             </AnimatedSection>
           ))}
@@ -89,9 +89,9 @@ export default function AboutPage() {
           {values.map((value, index) => (
             <AnimatedSection key={value.title} delay={index * 0.06}>
               <Card className="h-full">
-                <value.icon className="h-6 w-6 text-emerald-200" />
-                <h3 className="mt-4 text-xl font-semibold text-white">{value.title}</h3>
-                <p className="mt-3 text-sm text-slate-300">{value.description}</p>
+                <value.icon className="h-6 w-6 text-blue-500" />
+                <h3 className="mt-4 text-xl font-semibold text-slate-900">{value.title}</h3>
+                <p className="mt-3 text-sm text-slate-600">{value.description}</p>
               </Card>
             </AnimatedSection>
           ))}

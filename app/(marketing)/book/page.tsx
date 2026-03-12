@@ -28,7 +28,7 @@ function CalendarOrFallback({
 }) {
   if (embed) {
     return (
-      <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-3">
+      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm p-3">
         <iframe title={title} src={embed} className="h-[720px] w-full rounded-2xl border-0" loading="lazy" />
       </div>
     );
@@ -50,8 +50,8 @@ export default function BookPage() {
 
       <section className="mt-10 grid gap-8 lg:grid-cols-2">
         <AnimatedSection>
-          <h2 className="text-2xl font-semibold text-white">Free 2-hour intro (new clients)</h2>
-          <p className="mt-2 text-sm text-slate-300">
+          <h2 className="text-2xl font-semibold text-slate-900">Free 2-hour intro (new clients)</h2>
+          <p className="mt-2 text-sm text-slate-600">
             {`We'll review your current AI initiatives, identify high-leverage opportunities, and outline a practical next step.`}
           </p>
           <div className="mt-5">
@@ -65,8 +65,8 @@ export default function BookPage() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.08}>
-          <h2 className="text-2xl font-semibold text-white">Existing clients: book paid time</h2>
-          <p className="mt-2 text-sm text-slate-300">For ongoing delivery, support, or implementation sessions.</p>
+          <h2 className="text-2xl font-semibold text-slate-900">Existing clients: book paid time</h2>
+          <p className="mt-2 text-sm text-slate-600">For ongoing delivery, support, or implementation sessions.</p>
           <div className="mt-5">
             <CalendarOrFallback
               embed={existingClientEmbed}

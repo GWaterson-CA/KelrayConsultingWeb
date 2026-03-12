@@ -74,9 +74,9 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <AnimatedSection key={service.title} delay={index * 0.04}>
             <Card className="h-full">
-              <service.icon className="h-6 w-6 text-emerald-200" />
-              <h3 className="mt-4 text-xl font-semibold text-white">{service.title}</h3>
-              <p className="mt-3 text-sm text-slate-300">{service.description}</p>
+              <service.icon className="h-6 w-6 text-blue-500" />
+              <h3 className="mt-4 text-xl font-semibold text-slate-900">{service.title}</h3>
+              <p className="mt-3 text-sm text-slate-600">{service.description}</p>
             </Card>
           </AnimatedSection>
         ))}
@@ -95,10 +95,10 @@ export default function ServicesPage() {
           {engagementOptions.map((option, index) => (
             <AnimatedSection key={option.title} delay={index * 0.05}>
               <Card className="h-full">
-                <h3 className="text-xl font-semibold text-white">{option.title}</h3>
-                <p className="mt-3 text-sm text-emerald-200">Outcome: {option.outcome}</p>
-                <p className="mt-4 text-sm text-slate-300">Deliverables: {option.deliverables}</p>
-                <p className="mt-4 text-sm text-slate-300">Use case: {option.useCase}</p>
+                <h3 className="text-xl font-semibold text-slate-900">{option.title}</h3>
+                <p className="mt-3 text-sm text-blue-600">Outcome: {option.outcome}</p>
+                <p className="mt-4 text-sm text-slate-600">Deliverables: {option.deliverables}</p>
+                <p className="mt-4 text-sm text-slate-600">Use case: {option.useCase}</p>
               </Card>
             </AnimatedSection>
           ))}
@@ -110,7 +110,7 @@ export default function ServicesPage() {
           <SectionHeading badge="FAQs" title="Common questions before kickoff" />
         </AnimatedSection>
 
-        <AnimatedSection className="mt-6 rounded-3xl border border-white/10 bg-white/5 px-6">
+        <AnimatedSection className="mt-6 rounded-3xl border border-slate-200 bg-white px-6">
           <Accordion type="single" collapsible>
             {faqs.map((faq, index) => (
               <AccordionItem key={faq.q} value={`item-${index}`}>
@@ -122,9 +122,9 @@ export default function ServicesPage() {
         </AnimatedSection>
       </section>
 
-      <AnimatedSection className="mt-16 rounded-3xl border border-emerald-300/30 bg-gradient-to-r from-emerald-500/20 to-amber-500/20 p-8">
-        <h2 className="text-3xl font-semibold text-white">Not sure where to start? That&apos;s literally what the intro is for.</h2>
-        <p className="mt-3 text-slate-200">
+      <AnimatedSection className="mt-16 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50 to-sky-50 p-8">
+        <h2 className="text-3xl font-semibold text-slate-900">Not sure where to start? That&apos;s literally what the intro is for.</h2>
+        <p className="mt-3 text-slate-600">
           Book a free 2-hour session. We&apos;ll look at your business, show you where AI can help, and give you a clear next step — no commitment required.
         </p>
         <Button asChild className="mt-6">

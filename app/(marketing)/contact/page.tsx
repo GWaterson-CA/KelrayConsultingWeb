@@ -23,7 +23,7 @@ export default function ContactPage() {
         />
       </AnimatedSection>
 
-      <AnimatedSection delay={0.08} className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8">
+      <AnimatedSection delay={0.08} className="mt-10 rounded-3xl border border-slate-200 bg-white shadow-sm p-6 sm:p-8">
         <ContactForm />
       </AnimatedSection>
     </div>

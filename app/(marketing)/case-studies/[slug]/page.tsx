@@ -75,8 +75,8 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
           {caseStudy.featured ? <Badge>Featured</Badge> : null}
           {!caseStudy.published ? <Badge variant="secondary">Draft preview</Badge> : null}
         </div>
-        <h1 className="mt-5 text-balance text-4xl font-semibold text-white sm:text-5xl">{caseStudy.title}</h1>
-        <p className="mt-4 text-lg text-slate-300">{caseStudy.summary}</p>
+        <h1 className="mt-5 text-balance text-4xl font-semibold text-slate-900 sm:text-5xl">{caseStudy.title}</h1>
+        <p className="mt-4 text-lg text-slate-600">{caseStudy.summary}</p>
         <p className="mt-3 text-sm text-slate-400">
           Published {formatDate(caseStudy.published_at || caseStudy.updated_at)}
         </p>
@@ -84,7 +84,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       <AnimatedSection className="mt-10 space-y-4">
         {caseStudy.media.map((media) => (
-          <div key={media.id} className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+          <div key={media.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
             {media.type === "video" ? (
               <video className="w-full" controls playsInline loop muted poster="/images/video-poster-case.svg">
                 <source src={media.url} type="video/mp4" />
@@ -100,23 +100,23 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       <AnimatedSection className="mt-10 grid gap-5 md:grid-cols-3">
         {caseStudy.metrics.map((metric) => (
-          <Card key={metric.label} className="bg-emerald-400/10">
-            <p className="text-xs uppercase tracking-wider text-emerald-100">{metric.label}</p>
-            <p className="mt-2 text-3xl font-semibold text-white">{metric.value}</p>
+          <Card key={metric.label} className="bg-blue-50">
+            <p className="text-xs uppercase tracking-wider text-blue-600">{metric.label}</p>
+            <p className="mt-2 text-3xl font-semibold text-slate-900">{metric.value}</p>
           </Card>
         ))}
       </AnimatedSection>
 
       <AnimatedSection className="mt-10 grid gap-5 lg:grid-cols-2">
         <Card>
-          <h2 className="text-xl font-semibold text-white">Problem</h2>
-          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-emerald-200 [&_li]:ml-5 [&_ul]:list-disc">
+          <h2 className="text-xl font-semibold text-slate-900">Problem</h2>
+          <div className="mt-3 space-y-3 text-slate-600 [&_a]:text-blue-600 [&_li]:ml-5 [&_ul]:list-disc">
             <ReactMarkdown>{caseStudy.problem}</ReactMarkdown>
           </div>
         </Card>
         <Card>
-          <h2 className="text-xl font-semibold text-white">Approach</h2>
-          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-emerald-200 [&_li]:ml-5 [&_ul]:list-disc">
+          <h2 className="text-xl font-semibold text-slate-900">Approach</h2>
+          <div className="mt-3 space-y-3 text-slate-600 [&_a]:text-blue-600 [&_li]:ml-5 [&_ul]:list-disc">
             <ReactMarkdown>{caseStudy.approach}</ReactMarkdown>
           </div>
         </Card>
@@ -124,16 +124,16 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       <AnimatedSection className="mt-5 grid gap-5 lg:grid-cols-2">
         <Card>
-          <h2 className="text-xl font-semibold text-white">Deliverables</h2>
-          <ul className="mt-3 space-y-2 text-slate-300">
+          <h2 className="text-xl font-semibold text-slate-900">Deliverables</h2>
+          <ul className="mt-3 space-y-2 text-slate-600">
             {caseStudy.deliverables.map((item) => (
               <li key={item}>- {item}</li>
             ))}
           </ul>
         </Card>
         <Card>
-          <h2 className="text-xl font-semibold text-white">Tools used</h2>
-          <ul className="mt-3 space-y-2 text-slate-300">
+          <h2 className="text-xl font-semibold text-slate-900">Tools used</h2>
+          <ul className="mt-3 space-y-2 text-slate-600">
             {caseStudy.tools.map((item) => (
               <li key={item}>- {item}</li>
             ))}
@@ -143,12 +143,12 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       <AnimatedSection className="mt-5">
         <Card>
-          <h2 className="text-xl font-semibold text-white">Results</h2>
-          <div className="mt-3 space-y-3 text-slate-300 [&_a]:text-emerald-200 [&_li]:ml-5 [&_ul]:list-disc">
+          <h2 className="text-xl font-semibold text-slate-900">Results</h2>
+          <div className="mt-3 space-y-3 text-slate-600 [&_a]:text-blue-600 [&_li]:ml-5 [&_ul]:list-disc">
             <ReactMarkdown>{caseStudy.results}</ReactMarkdown>
           </div>
           {caseStudy.testimonial_quote ? (
-            <blockquote className="mt-5 rounded-2xl border border-emerald-300/30 bg-emerald-300/10 p-4 text-slate-100">
+            <blockquote className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-slate-700">
               &quot;{caseStudy.testimonial_quote}&quot;
             </blockquote>
           ) : null}

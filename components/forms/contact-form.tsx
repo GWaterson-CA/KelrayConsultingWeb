@@ -50,31 +50,31 @@ export function ContactForm() {
         <div className="space-y-2">
           <Label htmlFor="name">Name</Label>
           <Input id="name" {...register("name")} placeholder="Jane Smith" />
-          {errors.name ? <p className="text-xs text-rose-300">{errors.name.message}</p> : null}
+          {errors.name ? <p className="text-xs text-rose-500">{errors.name.message}</p> : null}
         </div>
         <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input id="email" type="email" {...register("email")} placeholder="jane@company.com" />
-          {errors.email ? <p className="text-xs text-rose-300">{errors.email.message}</p> : null}
+          {errors.email ? <p className="text-xs text-rose-500">{errors.email.message}</p> : null}
         </div>
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="phone">Phone</Label>
         <Input id="phone" type="tel" {...register("phone")} placeholder="+1 604 555 0123" />
-        {errors.phone ? <p className="text-xs text-rose-300">{errors.phone.message}</p> : null}
+        {errors.phone ? <p className="text-xs text-rose-500">{errors.phone.message}</p> : null}
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="company">Company</Label>
           <Input id="company" {...register("company")} placeholder="Northline Group" />
-          {errors.company ? <p className="text-xs text-rose-300">{errors.company.message}</p> : null}
+          {errors.company ? <p className="text-xs text-rose-500">{errors.company.message}</p> : null}
         </div>
         <div className="space-y-2">
           <Label htmlFor="role">Role</Label>
           <Input id="role" {...register("role")} placeholder="COO" />
-          {errors.role ? <p className="text-xs text-rose-300">{errors.role.message}</p> : null}
+          {errors.role ? <p className="text-xs text-rose-500">{errors.role.message}</p> : null}
         </div>
       </div>
 
@@ -83,13 +83,13 @@ export function ContactForm() {
         <select
           id="budgetRange"
           {...register("budgetRange")}
-          className="h-11 w-full rounded-xl border border-white/15 bg-slate-900/70 px-4 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-emerald-300"
+          className="h-11 w-full rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="" className="bg-slate-900">
+          <option value="" className="bg-white">
             Select a range
           </option>
           {budgetRanges.map((range) => (
-            <option key={range} value={range} className="bg-slate-900">
+            <option key={range} value={range} className="bg-white">
               {range}
             </option>
           ))}
@@ -103,7 +103,7 @@ export function ContactForm() {
           {...register("message")}
           placeholder="Tell us about your team, current workflow bottlenecks, and what outcomes you want from AI."
         />
-        {errors.message ? <p className="text-xs text-rose-300">{errors.message.message}</p> : null}
+        {errors.message ? <p className="text-xs text-rose-500">{errors.message.message}</p> : null}
       </div>
 
       <Button type="submit" disabled={isSubmitting} className="min-w-44">
@@ -112,7 +112,7 @@ export function ContactForm() {
       </Button>
 
       {status ? (
-        <p className={status.ok ? "text-sm text-emerald-300" : "text-sm text-rose-300"}>{status.message}</p>
+        <p className={status.ok ? "text-sm text-emerald-600" : "text-sm text-rose-500"}>{status.message}</p>
       ) : null}
     </form>
   );
