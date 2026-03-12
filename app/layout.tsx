@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Manrope, Space_Grotesk } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 
 import { BRAND } from "@/lib/brand";
 
 import "./globals.css";
 
-const headingFont = Space_Grotesk({
+const headingFont = Montserrat({
   subsets: ["latin"],
   variable: "--font-heading",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const bodyFont = Manrope({
+const bodyFont = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || BRAND.siteUrl;

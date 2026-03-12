@@ -30,13 +30,14 @@ export async function generateMetadata({ params }: CaseStudyDetailPageProps): Pr
   return {
     title: caseStudy.title,
     description: caseStudy.summary,
+    alternates: { canonical: `/case-studies/${slug}` },
     openGraph: {
       title: caseStudy.title,
       description: caseStudy.summary,
       type: "article",
       images: [
         {
-          url: caseStudy.media.find((item) => item.type === "image")?.url ?? "/images/og-cover.svg",
+          url: caseStudy.media.find((item) => item.type === "image")?.url ?? "/images/og-cover.png",
           alt: caseStudy.title,
         },
       ],
