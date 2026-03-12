@@ -54,15 +54,43 @@ export default async function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero */}
-      <section className="pt-16 lg:pt-24"><div className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
+      <section className="relative overflow-hidden pt-16 lg:pt-24">
+        {/* Full-width dark background with texture */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#020617] to-[#0f172a]" />
+          {/* Grid texture */}
+          <svg className="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <defs>
+              <pattern id="hero-grid" x="0" y="0" width="200" height="100" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="100" x2="200" y2="100" stroke="#6EE7B7" strokeOpacity="0.06" strokeWidth="1"/>
+                <line x1="200" y1="0" x2="200" y2="100" stroke="#6EE7B7" strokeOpacity="0.06" strokeWidth="1"/>
+              </pattern>
+              <filter id="hero-blur1" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="120"/>
+              </filter>
+              <filter id="hero-blur2" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="80"/>
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#hero-grid)"/>
+            {/* Green glow - right side */}
+            <circle cx="75%" cy="25%" r="300" fill="#10B981" fillOpacity="0.12" filter="url(#hero-blur1)"/>
+            {/* Orange glow - left side */}
+            <circle cx="20%" cy="80%" r="250" fill="#F59E0B" fillOpacity="0.08" filter="url(#hero-blur2)"/>
+            {/* Extra green glow center-right */}
+            <circle cx="60%" cy="60%" r="200" fill="#10B981" fillOpacity="0.06" filter="url(#hero-blur1)"/>
+          </svg>
+        </div>
+
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-6 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
         <AnimatedSection className="space-y-8">
-          <p className="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-medium text-blue-700">
+          <p className="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1 text-sm font-medium text-emerald-300">
             Your outsourced AI specialist
           </p>
-          <h1 className="text-balance text-5xl font-semibold leading-tight text-slate-900 md:text-6xl">
+          <h1 className="text-balance text-5xl font-semibold leading-tight text-white md:text-6xl">
             Custom AI tools and training built around your business.
           </h1>
-          <p className="max-w-xl text-lg text-slate-600">
+          <p className="max-w-xl text-lg text-slate-300">
             Most businesses don&apos;t have a dedicated AI person — and they shouldn&apos;t need one. We work alongside
             your team to build the tools you&apos;ve always wanted, train your staff to use AI with confidence, and find
             the opportunities you haven&apos;t spotted yet.
@@ -74,43 +102,46 @@ export default async function HomePage() {
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild variant="outline" size="lg" className="border-slate-500 text-slate-200 hover:bg-slate-800 hover:text-white">
               <Link href="/case-studies">See what we&apos;ve built</Link>
             </Button>
           </div>
-          <div className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
+          <div className="grid gap-3 text-sm text-slate-300 sm:grid-cols-2">
             <p className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+              <CheckCircle2 className="h-4 w-4 text-emerald-400" />
               Custom tools that fit how you already work
             </p>
             <p className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+              <CheckCircle2 className="h-4 w-4 text-emerald-400" />
               Hands-on AI training for your whole team
             </p>
             <p className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+              <CheckCircle2 className="h-4 w-4 text-emerald-400" />
               Discover what AI can actually do for you
             </p>
             <p className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+              <CheckCircle2 className="h-4 w-4 text-emerald-400" />
               Expert help without a full-time hire
             </p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.15}>
-          <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-50">
+          <div className="relative">
             <Image
               src="/images/hero-business.svg"
               alt="AI dashboard showing workflow efficiency, team confidence, and hours saved through custom business automation tools"
               width={800}
               height={600}
-              className="h-full min-h-[480px] w-full object-cover"
+              className="h-full min-h-[480px] w-full object-contain"
               priority
             />
           </div>
         </AnimatedSection>
-      </div></section>
+      </div>
+        {/* Bottom fade to white */}
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+      </section>
 
       {/* Social proof */}
       <section className="pb-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">

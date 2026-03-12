@@ -1,6 +1,6 @@
-<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="600" viewBox="-40 -40 880 680" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="-40" y1="-40" x2="840" y2="640" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#020617"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
@@ -28,8 +28,8 @@
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- Background (expanded to fill new viewBox) -->
+  <rect x="-40" y="-40" width="880" height="680" fill="url(#bg)"/>
 
   <!-- Ambient glow -->
   <circle cx="620" cy="120" r="200" fill="url(#glow1)" filter="url(#blur1)"/>
@@ -37,14 +37,14 @@
 
   <!-- Subtle grid -->
   <g stroke="#6EE7B7" stroke-opacity="0.06" stroke-width="1">
-    <line x1="0" y1="100" x2="800" y2="100"/>
-    <line x1="0" y1="200" x2="800" y2="200"/>
-    <line x1="0" y1="300" x2="800" y2="300"/>
-    <line x1="0" y1="400" x2="800" y2="400"/>
-    <line x1="0" y1="500" x2="800" y2="500"/>
-    <line x1="200" y1="0" x2="200" y2="600"/>
-    <line x1="400" y1="0" x2="400" y2="600"/>
-    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="-40" y1="100" x2="840" y2="100"/>
+    <line x1="-40" y1="200" x2="840" y2="200"/>
+    <line x1="-40" y1="300" x2="840" y2="300"/>
+    <line x1="-40" y1="400" x2="840" y2="400"/>
+    <line x1="-40" y1="500" x2="840" y2="500"/>
+    <line x1="200" y1="-40" x2="200" y2="640"/>
+    <line x1="400" y1="-40" x2="400" y2="640"/>
+    <line x1="600" y1="-40" x2="600" y2="640"/>
   </g>
 
   <!-- Dashboard card 1 - top left -->
