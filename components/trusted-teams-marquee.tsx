@@ -12,12 +12,12 @@ type TrustedTeamsMarqueeProps = {
 function TeamCard({ team }: { team: TrustedTeam }) {
   const content = (
     <div className="team-card group relative h-32 w-[250px] shrink-0 [perspective:1100px] sm:w-[280px]">
-      <div className="team-card-inner relative h-full w-full rounded-2xl border border-slate-200 bg-white shadow-sm transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-        <div className="absolute inset-0 flex items-center justify-center px-4 text-center text-sm leading-snug text-slate-700 [backface-visibility:hidden] sm:text-base">
+      <div className="team-card-inner relative h-full w-full rounded-2xl border border-white/10 bg-white/[0.05] shadow-sm transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
+        <div className="absolute inset-0 flex items-center justify-center px-4 text-center text-sm leading-snug text-slate-300 [backface-visibility:hidden] sm:text-base">
           {team.name}
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-slate-50 p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-slate-800/80 p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
           {team.logoUrl ? (
             <Image
               src={team.logoUrl}
@@ -58,8 +58,8 @@ export function TrustedTeamsMarquee({ teams }: TrustedTeamsMarqueeProps) {
       transition={{ duration: 0.45 }}
       className="relative"
     >
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#0a0f1e] to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#0a0f1e] to-transparent" />
 
       <div className="overflow-hidden">
         <div className="trusted-marquee-track flex w-max gap-4 py-1">

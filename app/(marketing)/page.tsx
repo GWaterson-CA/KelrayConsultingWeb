@@ -139,21 +139,19 @@ export default async function HomePage() {
           </div>
         </AnimatedSection>
       </div>
-        {/* Bottom fade to white */}
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
-      </section>
 
-      {/* Social proof */}
-      <section className="pb-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <AnimatedSection>
-          <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-            Trusted by business owners and their teams
-          </p>
-          <div className="mt-8">
-            <TrustedTeamsMarquee teams={trustedTeams} />
-          </div>
-        </AnimatedSection>
-      </div></section>
+        {/* Social proof - inside dark hero */}
+        <div className="relative pb-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <AnimatedSection>
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              Trusted by business owners and their teams
+            </p>
+            <div className="mt-8">
+              <TrustedTeamsMarquee teams={trustedTeams} />
+            </div>
+          </AnimatedSection>
+        </div></div>
+      </section>
 
       {/* The problem we solve */}
       <section className="bg-slate-50 py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
