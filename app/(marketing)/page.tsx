@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BRAND } from "@/lib/brand";
 import { getFeaturedCaseStudies } from "@/lib/data";
-import { processTimeline, services, testimonials, trustedTeams } from "@/lib/site-content";
+import { processTimeline, services, trustedTeams } from "@/lib/site-content";
 
 export default async function HomePage() {
   const featured = await getFeaturedCaseStudies(3);
@@ -54,7 +54,7 @@ export default async function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero */}
-      <section className="relative overflow-hidden pt-16 lg:pt-24">
+      <section className="relative overflow-hidden pt-12 lg:pt-16">
         {/* Full-width dark background with texture */}
         <div className="pointer-events-none absolute inset-0" aria-hidden="true">
           <div className="absolute inset-0 bg-gradient-to-br from-[#020617] to-[#0f172a]" />
@@ -82,23 +82,22 @@ export default async function HomePage() {
           </svg>
         </div>
 
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-6 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
-        <AnimatedSection className="space-y-8">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 pb-14 lg:grid-cols-[1.02fr_0.98fr] lg:px-10">
+        <AnimatedSection className="space-y-6">
           <p className="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1 text-sm font-medium text-emerald-300">
             Your outsourced AI specialist
           </p>
-          <h1 className="text-balance text-5xl font-semibold leading-tight text-white md:text-6xl">
-            Custom AI tools and training built around your business.
+          <h1 className="text-balance text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-[3.4rem]">
+            AI tools that eliminate repetitive business work.
           </h1>
           <p className="max-w-xl text-lg text-slate-300">
-            Most businesses don&apos;t have a dedicated AI person — and they shouldn&apos;t need one. We work alongside
-            your team to build the tools you&apos;ve always wanted, train your staff to use AI with confidence, and find
-            the opportunities you haven&apos;t spotted yet.
+            We build custom systems for quoting, reporting, data entry, operations, and customer workflows—then train
+            your team to use them confidently. You get practical AI capability without a full-time specialist.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg">
               <Link href="/book">
-                Book a free 2-hour intro
+                Book a 20-minute fit call
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -109,7 +108,7 @@ export default async function HomePage() {
           <div className="grid gap-3 text-sm text-slate-300 sm:grid-cols-2">
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-              Custom tools that fit how you already work
+              Built around the way your team already works
             </p>
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-400" />
@@ -117,7 +116,7 @@ export default async function HomePage() {
             </p>
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-              Discover what AI can actually do for you
+              Start with one measurable workflow
             </p>
             <p className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-emerald-400" />
@@ -127,15 +126,23 @@ export default async function HomePage() {
         </AnimatedSection>
 
         <AnimatedSection delay={0.15}>
-          <div className="relative">
+          <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.06] p-3 shadow-2xl">
+            <div className="flex items-center justify-between gap-4 px-3 pb-3 pt-1 text-xs">
+              <span className="font-semibold uppercase tracking-[0.16em] text-emerald-300">Real client build</span>
+              <span className="text-slate-400">Leon Lebeniste distributor portal</span>
+            </div>
             <Image
-              src="/images/hero-business.svg"
-              alt="AI dashboard showing workflow efficiency, team confidence, and hours saved through custom business automation tools"
-              width={800}
-              height={600}
-              className="h-full min-h-[480px] w-full object-contain"
+              src="/images/case-study-LL-Portal.png"
+              alt="Leon Lebeniste custom distributor ordering portal built by Ascent Business Solutions"
+              width={1200}
+              height={800}
+              className="max-h-[430px] w-full rounded-2xl bg-white object-contain"
               priority
             />
+            <div className="flex flex-wrap items-center justify-between gap-2 px-3 pb-1 pt-3 text-sm text-slate-300">
+              <span>Working prototype in 2 business days</span>
+              <Link href="/case-studies/LeonLebenistePortal" className="font-medium text-emerald-300 hover:text-emerald-200">Read the case study →</Link>
+            </div>
           </div>
         </AnimatedSection>
       </div>
@@ -152,6 +159,20 @@ export default async function HomePage() {
           </AnimatedSection>
         </div></div>
       </section>
+
+      {/* Verifiable proof directly after the promise */}
+      <section className="py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <AnimatedSection>
+          <SectionHeading
+            badge="Real client work"
+            title="See the systems behind the claims"
+            description="Named products, visible workflows, and results we can explain. Explore the work before you book a conversation."
+          />
+        </AnimatedSection>
+        <div className="mt-10">
+          <FeaturedCaseCarousel caseStudies={featured} />
+        </div>
+      </div></section>
 
       {/* The problem we solve */}
       <section className="bg-slate-50 py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -240,49 +261,18 @@ export default async function HomePage() {
         </div>
       </div></section>
 
-      {/* Featured projects */}
-      <section className="py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <AnimatedSection>
-          <SectionHeading
-            badge="Real results"
-            title="Tools and systems we've built for businesses like yours"
-            description="Every project starts with a real business problem. Here's what we've delivered."
-          />
-        </AnimatedSection>
-        <div className="mt-10">
-          <FeaturedCaseCarousel caseStudies={featured} />
-        </div>
-      </div></section>
-
-      {/* Testimonials */}
-      <section className="bg-slate-50 py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <AnimatedSection>
-          <SectionHeading badge="From our clients" title="What business owners and their teams say" align="center" />
-        </AnimatedSection>
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <AnimatedSection key={testimonial.name} delay={index * 0.07}>
-              <Card className="h-full">
-                <p className="text-base leading-relaxed text-slate-700">&quot;{testimonial.quote}&quot;</p>
-                <p className="mt-4 text-sm text-blue-600">{testimonial.name}</p>
-              </Card>
-            </AnimatedSection>
-          ))}
-        </div>
-      </div></section>
-
       {/* CTA */}
-      <section className="py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
+      <section className="bg-slate-50 py-20"><div className="mx-auto max-w-7xl px-6 lg:px-10">
         <AnimatedSection>
           <div className="rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50 via-blue-50 to-sky-50 p-10">
             <h2 className="text-3xl font-semibold text-slate-900">Ready to put AI to work in your business?</h2>
             <p className="mt-3 max-w-3xl text-slate-600">
-              Book a free 2-hour intro session. We&apos;ll review what you&apos;re doing now, show you what&apos;s
-              possible, and give you a clear next step — no pressure, no jargon.
+              Start with a focused 20-minute call. We&apos;ll understand the workflow, decide whether we can help, and
+              outline the next useful step—no pressure and no two-hour first commitment.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild>
-                <Link href="/book">Book free 2-hour intro</Link>
+                <Link href="/book">Book a 20-minute fit call</Link>
               </Button>
               <Button asChild variant="secondary">
                 <Link href="/contact">Contact us</Link>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { AnimatedSection } from "@/components/animated-section";
 import { SectionHeading } from "@/components/section-heading";
@@ -14,12 +15,12 @@ export const metadata: Metadata = {
 };
 
 const skills = [
-  { label: "Custom AI tool development", level: "Expert" },
-  { label: "AI workflow design & automation", level: "Expert" },
-  { label: "Team training & AI adoption", level: "Expert" },
-  { label: "Systems integration (CRM, ERP, etc.)", level: "Expert" },
-  { label: "Data organization & reporting", level: "Advanced" },
-  { label: "AI strategy for business owners", level: "Expert" },
+  { label: "Custom application delivery", evidence: "Public products and private operational systems" },
+  { label: "Workflow design & automation", evidence: "Quoting, estimating, reporting, intake, and data entry" },
+  { label: "Team training & adoption", evidence: "Role-specific sessions built around real work" },
+  { label: "Systems integration", evidence: "CRM, accounting, inventory, and project systems" },
+  { label: "Data organization & reporting", evidence: "Structured records, audit trails, and decision-ready outputs" },
+  { label: "Handoff & ownership", evidence: "Documentation, administrator access, and practical team ownership" },
 ];
 
 export default function AboutPage() {
@@ -72,13 +73,16 @@ export default function AboutPage() {
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {skills.map((skill, index) => (
             <AnimatedSection key={skill.label} delay={index * 0.05}>
-              <div className="flex items-center justify-between rounded-2xl border border-slate-200 bg-white shadow-sm px-5 py-4">
-                <span className="text-slate-700">{skill.label}</span>
-                <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs text-blue-700">{skill.level}</span>
+              <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                <span className="font-medium text-slate-900">{skill.label}</span>
+                <p className="mt-2 text-sm text-slate-600">{skill.evidence}</p>
               </div>
             </AnimatedSection>
           ))}
         </div>
+        <p className="mt-6 text-sm text-slate-600">
+          See the evidence in our <Link href="/case-studies" className="font-medium text-blue-600 hover:text-blue-700">case studies</Link>, or review how we approach <Link href="/security-data" className="font-medium text-blue-600 hover:text-blue-700">security, data, and project ownership</Link>.
+        </p>
       </section>
 
       <section className="mt-20">

@@ -48,7 +48,7 @@ metrics:
 
 testimonial_quote: null
 
-featured: false
+featured: true
 published: true
 
 tags:

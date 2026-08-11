@@ -24,6 +24,8 @@ const MediaSchema = z.object({
 
 export const CaseStudyFileSchema = z.object({
   title: z.string().min(3),
+  client_name: z.string().min(2).nullable().optional().default(null),
+  client_website: z.string().url().nullable().optional().default(null),
   summary: z.string().min(20),
   industry: z.string().min(2),
   problem: z.string().min(20),
@@ -50,6 +52,8 @@ export function toCaseStudy(slug: string, data: CaseStudyFileData): CaseStudy {
     id: slug,
     slug,
     title: data.title,
+    client_name: data.client_name,
+    client_website: data.client_website,
     summary: data.summary,
     industry: data.industry,
     problem: data.problem,

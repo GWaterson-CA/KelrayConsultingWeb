@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
@@ -80,6 +81,16 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
         <p className="mt-3 text-sm text-slate-400">
           Published {formatDate(caseStudy.published_at || caseStudy.updated_at)}
         </p>
+        {caseStudy.client_website ? (
+          <Link
+            href={caseStudy.client_website}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-4 inline-flex text-sm font-medium text-blue-600 hover:text-blue-700"
+          >
+            Visit {caseStudy.client_name || "client website"} ↗
+          </Link>
+        ) : null}
       </AnimatedSection>
 
       <AnimatedSection className="mt-10 space-y-4">
@@ -125,17 +136,17 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
       <AnimatedSection className="mt-5 grid gap-5 lg:grid-cols-2">
         <Card>
           <h2 className="text-xl font-semibold text-slate-900">Deliverables</h2>
-          <ul className="mt-3 space-y-2 text-slate-600">
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-600">
             {caseStudy.deliverables.map((item) => (
-              <li key={item}>- {item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </Card>
         <Card>
           <h2 className="text-xl font-semibold text-slate-900">Tools used</h2>
-          <ul className="mt-3 space-y-2 text-slate-600">
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-slate-600">
             {caseStudy.tools.map((item) => (
-              <li key={item}>- {item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </Card>

@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     }
 
     const values = parsed.data;
-    const callLabel = values.callType === "free_intro" ? "Free 2-hour intro" : "Existing client paid time";
+    const callLabel = values.callType === "free_intro" ? "20-minute fit call" : "Existing client paid time";
 
     const notificationResult = await sendNotificationEmail({
       subject: `${callLabel} booking request from ${values.company}`,
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       <p><strong>Type:</strong> ${callLabel}</p>
       <p><strong>Name:</strong> ${values.name}</p>
       <p><strong>Email:</strong> ${values.email}</p>
-      <p><strong>Phone:</strong> ${values.phone}</p>
+      <p><strong>Phone:</strong> ${values.phone || "Not provided"}</p>
       <p><strong>Company:</strong> ${values.company}</p>
       <p><strong>Details:</strong></p>
       <p>${values.details}</p>
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       <p>Hi ${values.name},</p>
       <p>We received your ${callLabel.toLowerCase()} request and will follow up with next steps shortly.</p>
       <p><strong>Company:</strong> ${values.company}</p>
-      <p><strong>Phone:</strong> ${values.phone}</p>
+      <p><strong>Phone:</strong> ${values.phone || "Not provided"}</p>
       <p><strong>Request details:</strong></p>
       <p>${values.details}</p>
       <br />

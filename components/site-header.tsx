@@ -27,8 +27,8 @@ export function SiteHeader() {
           </nav>
           <Button asChild size="sm">
             <Link href="/book">
-              <span className="sm:hidden">Book intro</span>
-              <span className="hidden sm:inline">Book free 2-hour intro</span>
+              <span className="sm:hidden">Fit call</span>
+              <span className="hidden sm:inline">Book a 20-minute fit call</span>
             </Link>
           </Button>
         </div>

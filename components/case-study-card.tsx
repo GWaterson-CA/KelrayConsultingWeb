@@ -30,9 +30,12 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
         </div>
         <h3 className="text-xl font-semibold text-slate-900">{caseStudy.title}</h3>
         <p className="text-sm text-slate-600">{caseStudy.summary}</p>
-        <div className="flex flex-wrap gap-4 text-sm text-blue-600">
+        <div className="grid gap-2 text-sm text-blue-700 sm:grid-cols-2">
           {caseStudy.metrics.slice(0, 2).map((metric) => (
-            <span key={metric.label}>{metric.value}</span>
+            <span key={metric.label} className="rounded-xl bg-blue-50 px-3 py-2">
+              <span className="block text-xs text-slate-500">{metric.label}</span>
+              <span className="font-semibold">{metric.value}</span>
+            </span>
           ))}
         </div>
         <Link href={`/case-studies/${caseStudy.slug}`} className="inline-flex text-sm font-medium text-blue-600 hover:text-blue-700">

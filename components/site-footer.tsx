@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { AnalyticsChoicesButton } from "@/components/analytics-consent";
 import { BRAND } from "@/lib/brand";
 import { navLinks } from "@/lib/site-content";
 
@@ -37,8 +38,13 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-7xl px-6 text-xs text-slate-400 lg:px-10">
-        (c) {new Date().getFullYear()} {BRAND.name}. All rights reserved.
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-3 px-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between lg:px-10">
+        <p>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
+          <Link href="/privacy" className="transition-colors hover:text-slate-900">Privacy</Link>
+          <Link href="/security-data" className="transition-colors hover:text-slate-900">Security &amp; data</Link>
+          <AnalyticsChoicesButton />
+        </div>
       </div>
     </footer>
   );

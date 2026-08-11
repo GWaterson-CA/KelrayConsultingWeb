@@ -1,0 +1,70 @@
+title: "MetalShopHQ Job-Shop Operations Platform"
+client_name: "MetalShopHQ"
+client_website: "https://www.metalshophq.com/en"
+summary: "Designed and built a purpose-built operations platform that carries metal fabrication jobs from quote to shipped, with jobs, time, drawings, inventory, purchasing, and costing in one shared system."
+
+industry: "Manufacturing & Distribution"
+
+problem: |
+  Metal fabrication job shops often run active work across paper travellers, spreadsheets, shared drives, accounting software, and verbal updates from the floor. The result is a familiar set of problems: the office cannot see job status without asking, drawings become separated from the work, actual costs are difficult to compare with the quote, and supplier price history is lost between jobs.
+
+  MetalShopHQ needed to turn those connected shop-floor problems into one coherent product without forcing a working fabrication shop into a generic ERP process.
+
+approach: |
+  Ascent worked with MetalShopHQ to translate the real stages of fabrication work into a focused web application. The experience follows a job from quoting and drawing through material purchasing, build, completion, and invoicing. Drawings, photographs, time entries, purchase orders, inventory activity, and cost history stay connected to the job.
+
+  The platform also uses AI-assisted supplier-invoice ingestion to extract line items for human review, and connects with QuickBooks Online so the accounting system can remain authoritative. Role-based access gives owners, purchasers, operators, shop staff, and viewers an interface appropriate to their responsibilities.
+
+deliverables:
+  - "Quote-to-shipped job board"
+  - "Job-based drawings, files, photographs, and time tracking"
+  - "Inventory and purchasing workflows"
+  - "Quoted-versus-actual job costing and supplier price history"
+  - "AI-assisted supplier invoice ingestion with human review"
+  - "QuickBooks Online integration"
+  - "Role-based access for office and shop-floor teams"
+
+tools:
+  - "Custom web application development"
+  - "Workflow and product design"
+  - "AI document extraction"
+  - "QuickBooks Online integration"
+  - "Role-based access control"
+
+results: |
+  MetalShopHQ launched as a working, public product for metal fabrication shops. It gives the office and shop floor a shared view of job status and keeps the operational record attached to the work instead of scattered across separate tools.
+
+  Each completed job also contributes useful costing and supplier-price history for future quotes. The result is a product designed around the way a job shop actually works, with a clear path from quote to shipped. [Explore the live product](https://www.metalshophq.com/en).
+
+metrics:
+  - label: "Workflow coverage"
+    value: "Quote to shipped"
+    outcomeType: "time_saved"
+  - label: "Team access"
+    value: "Role-based"
+    outcomeType: "risk_reduction"
+  - label: "Product trial"
+    value: "14 days"
+    outcomeType: "risk_reduction"
+
+testimonial_quote: null
+
+featured: true
+published: true
+
+tags:
+  - "manufacturing"
+  - "job-shop-software"
+  - "inventory"
+  - "purchasing"
+  - "ai-document-ingest"
+
+media:
+  - type: "image"
+    url: "/images/case-study-metalshophq.svg"
+    alt: "MetalShopHQ job board showing metal fabrication work moving from quote to shipped"
+    sort_order: 1
+
+published_at: "2026-08-11T12:00:00.000Z"
+created_at: "2026-08-11T12:00:00.000Z"
+updated_at: "2026-08-11T12:00:00.000Z"

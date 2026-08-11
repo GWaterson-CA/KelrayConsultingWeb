@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/animated-section";
 import { ContactForm } from "@/components/forms/contact-form";
 import { SectionHeading } from "@/components/section-heading";
-import { BRAND } from "@/lib/brand";
 
 export const metadata: Metadata = {
   title: "Contact Us — Talk to an AI Specialist",

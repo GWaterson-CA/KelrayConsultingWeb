@@ -12,8 +12,8 @@ import {
 
 export const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/about", label: "About" },
-  { href: "/book", label: "Book" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -72,6 +72,17 @@ export type TrustedTeam = {
 };
 
 export const trustedTeams: TrustedTeam[] = [
+  {
+    name: "MetalShopHQ",
+    website: "https://www.metalshophq.com/en",
+    logoUrl:
+      "https://www.metalshophq.com/_next/static/media/primary-transparent.6651f3e1.png",
+  },
+  {
+    name: "DentSheet",
+    website: "https://www.dentsheet.com",
+    logoUrl: "https://www.dentsheet.com/icon.svg",
+  },
   {
     name: "Kelray Heating",
     website: "https://www.kelrayheating.ca",

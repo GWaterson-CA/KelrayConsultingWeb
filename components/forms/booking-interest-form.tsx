@@ -73,7 +73,7 @@ export function BookingInterestForm({ callType, title, description }: BookingInt
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor={`${callType}-phone`}>Phone</Label>
+          <Label htmlFor={`${callType}-phone`}>Phone (optional)</Label>
           <Input id={`${callType}-phone`} type="tel" {...register("phone")} />
           {errors.phone ? <p className="text-xs text-rose-500">{errors.phone.message}</p> : null}
         </div>

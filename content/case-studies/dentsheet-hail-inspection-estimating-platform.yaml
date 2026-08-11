@@ -1,0 +1,69 @@
+title: "DentSheet Hail Inspection & Estimating Platform"
+client_name: "DentSheet"
+client_website: "https://www.dentsheet.com"
+summary: "Designed and built a mobile-first hail inspection and estimating platform that turns panel-level dent counts into consistent PDR estimates, printouts, PDFs, and body-shop workflows."
+
+industry: "Automotive"
+
+problem: |
+  Paintless dent repair teams need to inspect vehicles quickly while keeping every version of an estimate consistent. Manually classifying damage, applying changing rate tables, recreating totals for printouts, and coordinating paperwork with partner body shops creates room for errors and unnecessary reconciliation.
+
+  DentSheet needed a workflow that matched how hail inspections happen on the shop floor: walk the vehicle, capture damage panel by panel, apply the correct rates, and send one dependable number everywhere it needs to go.
+
+approach: |
+  Ascent worked with DentSheet to design and build a phone-friendly inspection experience around a vehicle diagram and panel-level dent counts. Severity derives from the applicable rate table instead of relying on a separate manual selection, and every claim remains attached to the rate-table version used when it was opened.
+
+  The same calculation drives the working screen, printed matrix, PDF, and partner portal. AI-assisted chalk reading can suggest a dent count from a photographed panel, but an estimator must confirm the result before it reaches the estimate.
+
+deliverables:
+  - "Mobile-first, panel-by-panel vehicle inspections"
+  - "Version-pinned PDR rate tables"
+  - "Consistent estimate, print-sheet, PDF, and portal totals"
+  - "AI-assisted chalk reads with estimator confirmation"
+  - "Body-shop partner portal"
+  - "Shop-to-shop collaboration workflow"
+
+tools:
+  - "Custom web application development"
+  - "Mobile workflow design"
+  - "AI-assisted image analysis"
+  - "Document and PDF generation"
+  - "Versioned calculation logic"
+
+results: |
+  DentSheet launched in early access as a focused product for hail inspection and PDR estimating. The product gives estimators one guided workflow from vehicle inspection to a shareable estimate, while keeping calculations aligned across the screen, printed paperwork, PDF, and partner portal.
+
+  Human confirmation remains part of AI-assisted dent counting, and pinned rates preserve the basis of an estimate even when a shop updates its pricing later. [Explore the live product](https://www.dentsheet.com).
+
+metrics:
+  - label: "Inspection workflow"
+    value: "4 guided stages"
+    outcomeType: "time_saved"
+  - label: "Rate handling"
+    value: "Version-pinned"
+    outcomeType: "risk_reduction"
+  - label: "AI review"
+    value: "Human-confirmed"
+    outcomeType: "risk_reduction"
+
+testimonial_quote: null
+
+featured: true
+published: true
+
+tags:
+  - "automotive"
+  - "pdr"
+  - "hail-inspection"
+  - "estimating"
+  - "ai-image-analysis"
+
+media:
+  - type: "image"
+    url: "/images/case-study-dentsheet.svg"
+    alt: "DentSheet hail inspection estimate showing panel-level dent counts and consistent pricing"
+    sort_order: 1
+
+published_at: "2026-08-11T12:00:00.000Z"
+created_at: "2026-08-11T12:00:00.000Z"
+updated_at: "2026-08-11T12:00:00.000Z"

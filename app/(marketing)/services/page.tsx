@@ -19,18 +19,21 @@ const engagementOptions = [
   {
     title: "Strategy Workshop",
     outcome: "A clear AI roadmap in 1-2 weeks",
+    commercialModel: "Fixed scope and investment agreed before kickoff",
     deliverables: "We review your operations, identify the best AI opportunities, and give you a prioritized action plan you can start on immediately.",
     useCase: "Best if you know AI could help but aren't sure where to start.",
   },
   {
     title: "Ongoing Partnership",
     outcome: "A dedicated AI specialist working with your team",
+    commercialModel: "Monthly capacity and priorities agreed in advance",
     deliverables: "Monthly implementation cycles, team training sessions, and continuous improvement — like having an AI department without the overhead.",
     useCase: "Best if you want to roll out AI across your business over time.",
   },
   {
     title: "Project Build",
     outcome: "A specific tool or automation, built and delivered",
+    commercialModel: "Milestone-based proposal after a focused discovery",
     deliverables: "We design, build, test, and hand off a working solution — including training your team to use and maintain it.",
     useCase: "Best if you have a specific problem you want solved with AI.",
   },
@@ -97,12 +100,16 @@ export default function ServicesPage() {
               <Card className="h-full">
                 <h3 className="text-xl font-semibold text-slate-900">{option.title}</h3>
                 <p className="mt-3 text-sm text-blue-600">Outcome: {option.outcome}</p>
+                <p className="mt-3 text-sm text-slate-600">Commercial model: {option.commercialModel}</p>
                 <p className="mt-4 text-sm text-slate-600">Deliverables: {option.deliverables}</p>
                 <p className="mt-4 text-sm text-slate-600">Use case: {option.useCase}</p>
               </Card>
             </AnimatedSection>
           ))}
         </div>
+        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-600">
+          Every proposal states the scope, timeline, total investment, assumptions, and optional support before work begins. Custom-build pricing follows the workflow, integrations, and delivery risk—not the size of your company or what we think you might pay.
+        </p>
       </section>
 
       <section className="mt-20">
@@ -125,10 +132,10 @@ export default function ServicesPage() {
       <AnimatedSection className="mt-16 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50 to-sky-50 p-8">
         <h2 className="text-3xl font-semibold text-slate-900">Not sure where to start? That&apos;s literally what the intro is for.</h2>
         <p className="mt-3 text-slate-600">
-          Book a free 2-hour session. We&apos;ll look at your business, show you where AI can help, and give you a clear next step — no commitment required.
+          Start with a focused 20-minute fit call. We&apos;ll understand the workflow, determine whether we can help, and agree on the next useful step.
         </p>
         <Button asChild className="mt-6">
-          <Link href="/book">Book now</Link>
+          <Link href="/book">Book a fit call</Link>
         </Button>
       </AnimatedSection>
     </div>

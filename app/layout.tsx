@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import { BRAND } from "@/lib/brand";
 
 import "./globals.css";
@@ -61,20 +62,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4RELDCS9R" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-L4RELDCS9R');
-            `,
-          }}
-        />
-      </head>
-      <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>{children}</body>
+      <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
+        {children}
+        <AnalyticsConsent />
+      </body>
     </html>
   );
 }

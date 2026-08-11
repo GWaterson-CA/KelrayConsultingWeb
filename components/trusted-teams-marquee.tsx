@@ -11,29 +11,21 @@ type TrustedTeamsMarqueeProps = {
 
 function TeamCard({ team }: { team: TrustedTeam }) {
   const content = (
-    <div className="team-card group relative h-32 w-[250px] shrink-0 [perspective:1100px] sm:w-[280px]">
-      <div className="team-card-inner relative h-full w-full rounded-2xl border border-white/10 bg-white/[0.05] shadow-sm transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]">
-        <div className="absolute inset-0 flex items-center justify-center px-4 text-center text-sm leading-snug text-slate-300 [backface-visibility:hidden] sm:text-base">
-          {team.name}
-        </div>
-
-        <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-slate-800/80 p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          {team.logoUrl ? (
+    <div className="flex h-28 w-[240px] shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] px-6 shadow-sm transition hover:border-emerald-400/40 hover:bg-white/[0.08] sm:w-[260px]">
+      <div className="flex items-center justify-center gap-4 text-center">
+        {team.logoUrl ? (
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-white p-2">
             <Image
               src={team.logoUrl}
               alt={`${team.name} logo`}
-              width={220}
-              height={90}
-              className="max-h-16 w-full object-contain"
+              width={56}
+              height={56}
+              className="max-h-12 max-w-12 object-contain"
               unoptimized
             />
-          ) : (
-            <div className="text-center">
-              <p className="text-sm text-slate-500">{team.name}</p>
-              <p className="mt-1 text-xs uppercase tracking-wider text-slate-400">Logo coming soon</p>
-            </div>
-          )}
-        </div>
+          </div>
+        ) : null}
+        <p className="text-sm font-medium leading-snug text-slate-200 sm:text-base">{team.name}</p>
       </div>
     </div>
   );

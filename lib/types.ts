@@ -19,6 +19,8 @@ export type CaseStudy = {
   id: string;
   title: string;
   slug: string;
+  client_name: string | null;
+  client_website: string | null;
   summary: string;
   industry: string;
   problem: string;
