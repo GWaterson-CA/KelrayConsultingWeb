@@ -1,0 +1,71 @@
+title: "Fast Fun Learning Custom Education Tools"
+client_name: "Fast Fun Learning"
+client_website: null
+summary: "Customized education tools that help children practise math, spelling, and computer basics through interactive, game-style activities."
+
+industry: "Education Technology"
+work_types:
+  - "Custom software"
+  - "Interactive learning"
+
+problem: |
+  Children learn at different speeds, and standard worksheets or one-size-fits-all education software can make essential practice feel repetitive. Fast Fun Learning needed a more engaging way for young learners to build confidence with core academic and digital skills.
+
+  The project focused on three practical areas—math, spelling, and computer basics—and needed to make each one approachable through simple, age-appropriate interactions rather than passive content.
+
+approach: |
+  Ascent Business Solutions developed customized education tools around short, interactive activities and familiar game-style patterns. Each activity gives children a clear task, an immediate response, and a reason to keep practising without turning the experience into a conventional test.
+
+  The tools were designed to keep navigation simple and visual while supporting different kinds of learning: working through numbers and arithmetic, recognizing and building words, and becoming comfortable with foundational computer interactions.
+
+deliverables:
+  - "Customized math learning activities"
+  - "Interactive spelling and word activities"
+  - "Foundational computer-skills activities"
+  - "Child-friendly navigation and interaction design"
+  - "Game-style feedback and practice flows"
+  - "Responsive tools for accessible practice"
+
+tools:
+  - "Custom web application development"
+  - "Interactive learning design"
+  - "Game-mechanics prototyping"
+  - "Child-friendly interface design"
+  - "Responsive front-end development"
+
+results: |
+  Fast Fun Learning received a tailored set of education tools spanning math, spelling, and computer basics. The activities turn essential practice into short, interactive experiences designed to feel more like play than worksheets.
+
+  The project demonstrates how custom software can support a specific learning approach without forcing educators or children into a generic platform. No percentage-based learning claims are presented without a formal measurement programme.
+
+metrics:
+  - label: "Learning areas"
+    value: "Math + spelling"
+    outcomeType: "time_saved"
+  - label: "Digital skills"
+    value: "Computer basics"
+    outcomeType: "risk_reduction"
+  - label: "Activity style"
+    value: "Interactive games"
+    outcomeType: "revenue_growth"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "education"
+  - "learning-games"
+  - "children"
+  - "custom-tools"
+
+media:
+  - type: "image"
+    url: "/images/case-study-fast-fun-learning-tools.png"
+    alt: "Illustrative Fast Fun Learning cover representing math, spelling, and computer-basics activities; not a product screenshot"
+    sort_order: 1
+
+published_at: "2026-08-14T14:00:00.000Z"
+created_at: "2026-08-14T14:00:00.000Z"
+updated_at: "2026-08-14T18:00:00.000Z"

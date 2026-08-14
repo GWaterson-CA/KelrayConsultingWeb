@@ -8,12 +8,15 @@ Portfolio imagery is kept locally so case-study pages do not depend on a client 
 - `case-study-dentsheet.jpg` — https://www.dentsheet.com
 - `case-study-frothmonkey.png` — https://www.frothmonkey.com/opengraph-image
 - `case-study-kelray-heating.jpg` — https://kelrayheating.ca/pages/heater-wizard
-- `case-study-fast-fun-learning.jpg` — https://www.fastfunlearning.com (redirects to the Xandrium storefront)
 - `case-study-metalquotehq.jpg` — https://www.metalquotehq.com
 - `case-study-metalcuthq.jpg` — https://www.metalcuthq.com
 - `case-study-la-clinique-du-voyageur.jpg` — https://www.cliniqueduvoyageur.com
 
 Captured August 14, 2026 from public-facing pages. Product names and interface copy remain the property of their respective organizations.
+
+## Illustrative case-study covers
+
+- `case-study-fast-fun-learning-tools.png` — original illustrative cover generated with the built-in image-generation tool. It represents confirmed learning areas (math, spelling, and computer basics) without claiming to show an exact product interface.
 
 ## Sanitized client work
 

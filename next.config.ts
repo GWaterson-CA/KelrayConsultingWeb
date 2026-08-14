@@ -5,6 +5,15 @@ import { fileURLToPath } from "url";
 const currentDir = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/case-studies/fast-fun-learning-xandrium-storefront",
+        destination: "/case-studies/fast-fun-learning-custom-education-tools",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     root: currentDir,
   },
