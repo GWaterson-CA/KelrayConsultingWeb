@@ -88,12 +88,6 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
         <h1 className="mt-5 text-balance text-4xl font-semibold text-slate-900 sm:text-5xl">{caseStudy.title}</h1>
         <p className="mt-4 text-lg text-slate-600">{caseStudy.summary}</p>
         <p className="mt-3 text-sm text-slate-500">Case study updated {formatDate(caseStudy.updated_at)}</p>
-        {caseStudy.client_name ? (
-          <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600">
-            <span className="font-semibold text-slate-900">Client/product: {caseStudy.client_name}.</span>{" "}
-            This page describes work completed for this organization or product; it does not imply ownership by Ascent Business Solutions.
-          </div>
-        ) : null}
         {caseStudy.client_website ? (
           <Link
             href={caseStudy.client_website}
