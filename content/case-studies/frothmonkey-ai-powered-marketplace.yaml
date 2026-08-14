@@ -1,0 +1,71 @@
+title: "FrothMonkey AI-Powered Marketplace"
+client_name: "FrothMonkey"
+client_website: "https://www.frothmonkey.com"
+summary: "Designed and built the complete FrothMonkey marketplace, where AI connects what people want with relevant items offered by people nearby."
+
+industry: "Marketplace & Consumer Technology"
+work_types:
+  - "Product build"
+  - "AI marketplace"
+
+problem: |
+  Traditional local marketplaces make buyers search through an endless stream of listings and make sellers compete for attention. A buyer may know exactly what they need while a suitable item is already available nearby, yet the two posts never meet.
+
+  FrothMonkey needed a marketplace designed around intent rather than scrolling: people describe what they want or what they have, and the platform does the work of finding useful connections.
+
+approach: |
+  Ascent Business Solutions designed and built FrothMonkey as a complete marketplace product. The experience supports both “wants” and “haves,” then uses AI-assisted matching to connect compatible posts and show the strength of a potential match.
+
+  The product also includes listing and browsing workflows, accounts, messaging and marketplace activity, auctions, and a trade-up experience. The public experience makes the premise clear: users can post for free, receive relevant matches, and decide for themselves whether a connection is worth pursuing.
+
+deliverables:
+  - "Complete responsive marketplace product"
+  - "AI-assisted matching between wants and available items"
+  - "Buyer, seller, account, and listing workflows"
+  - "Marketplace browsing and activity views"
+  - "Auctions and trade-up experiences"
+  - "Privacy-conscious product and consent design"
+
+tools:
+  - "Custom web application development"
+  - "AI semantic matching"
+  - "Marketplace data and workflow design"
+  - "Authentication and account management"
+  - "Responsive product design"
+
+results: |
+  FrothMonkey launched as a working public marketplace with active wants, available items, and AI-generated matches. Instead of requiring people to repeatedly search listings, the product can surface relevant nearby connections from the intent expressed in each post.
+
+  The result is a distinct marketplace model built around matching rather than feeds, with no Meta account requirement, no advertising, and no sale of user data. [Explore FrothMonkey](https://www.frothmonkey.com).
+
+metrics:
+  - label: "Product scope"
+    value: "End-to-end build"
+    outcomeType: "time_saved"
+  - label: "Core experience"
+    value: "AI matching"
+    outcomeType: "revenue_growth"
+  - label: "Public status"
+    value: "Live marketplace"
+    outcomeType: "risk_reduction"
+
+testimonial_quote: null
+
+featured: true
+published: true
+
+tags:
+  - "marketplace"
+  - "ai-matching"
+  - "consumer-product"
+  - "auctions"
+
+media:
+  - type: "image"
+    url: "/images/case-study-frothmonkey.png"
+    alt: "FrothMonkey public product graphic describing its AI-powered marketplace matching experience"
+    sort_order: 1
+
+published_at: "2026-08-14T16:00:00.000Z"
+created_at: "2026-08-14T16:00:00.000Z"
+updated_at: "2026-08-14T16:00:00.000Z"

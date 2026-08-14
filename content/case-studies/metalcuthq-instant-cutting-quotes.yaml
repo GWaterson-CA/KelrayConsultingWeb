@@ -1,0 +1,71 @@
+title: "MetalCutHQ Instant Cutting Quotes"
+client_name: "MetalCutHQ"
+client_website: "https://www.metalcuthq.com"
+summary: "An instant-quoting product that reads CAD geometry, applies a shop’s materials and services, and returns metal-cutting prices as the buyer configures a part."
+
+industry: "Manufacturing & Distribution"
+work_types:
+  - "Product build"
+  - "Instant quoting"
+
+problem: |
+  Engineers and buyers often wait for a metal shop to manually inspect CAD files, identify geometry, confirm material and finishing requirements, and calculate a price. The same shop then repeats that process for every early-stage enquiry, including many that never become orders.
+
+  MetalCutHQ needed an experience that could give buyers useful pricing immediately while allowing each participating shop to control the materials, services, and pricing rules behind the result.
+
+approach: |
+  MetalCutHQ was designed as a two-sided quoting product. Buyers upload STEP, STP, or DXF files, then select material, thickness, secondary services, and finish. Geometry is analysed in the browser and the quote updates as the configuration changes.
+
+  On the shop side, fabricators configure what they sell and how it is priced, share a shop-specific quoting link, and receive priced submissions for review. This keeps the buying experience fast without reducing the shop’s control over its own commercial rules.
+
+deliverables:
+  - "STEP, STP, and DXF upload workflow"
+  - "Browser-based CAD geometry analysis"
+  - "Live material, service, finish, and pricing configuration"
+  - "Buyer projects and saved quotes"
+  - "Shop-managed pricing and service catalogue"
+  - "Shop-specific customer quoting experience"
+
+tools:
+  - "Custom web application development"
+  - "CAD geometry processing"
+  - "Rules-based pricing architecture"
+  - "Multi-tenant product design"
+  - "Responsive quoting workflow"
+
+results: |
+  MetalCutHQ launched as a public instant-quoting product for metal cutting. Buyers can move from CAD file to configured price without beginning an email thread, while participating shops retain control of the materials, services, and rates used in their quotes.
+
+  The result is a faster first step for both sides of the transaction and a reusable quoting channel for fabrication shops. [Explore MetalCutHQ](https://www.metalcuthq.com).
+
+metrics:
+  - label: "File support"
+    value: "STEP + DXF"
+    outcomeType: "time_saved"
+  - label: "Quote response"
+    value: "Instant repricing"
+    outcomeType: "time_saved"
+  - label: "Shop control"
+    value: "Own rules"
+    outcomeType: "risk_reduction"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "manufacturing"
+  - "cad"
+  - "instant-quoting"
+  - "multi-tenant-product"
+
+media:
+  - type: "image"
+    url: "/images/case-study-metalcuthq.jpg"
+    alt: "MetalCutHQ public product page describing instant quotes from uploaded CAD files and real shop pricing"
+    sort_order: 1
+
+published_at: "2026-08-14T12:00:00.000Z"
+created_at: "2026-08-14T12:00:00.000Z"
+updated_at: "2026-08-14T12:00:00.000Z"

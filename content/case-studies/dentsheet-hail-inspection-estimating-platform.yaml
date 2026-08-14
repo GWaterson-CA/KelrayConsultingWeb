@@ -4,6 +4,9 @@ client_website: "https://www.dentsheet.com"
 summary: "Designed and built a mobile-first hail inspection and estimating platform that turns panel-level dent counts into consistent PDR estimates, printouts, PDFs, and body-shop workflows."
 
 industry: "Automotive"
+work_types:
+  - "Product build"
+  - "AI-assisted workflow"
 
 problem: |
   Paintless dent repair teams need to inspect vehicles quickly while keeping every version of an estimate consistent. Manually classifying damage, applying changing rate tables, recreating totals for printouts, and coordinating paperwork with partner body shops creates room for errors and unnecessary reconciliation.
@@ -60,10 +63,10 @@ tags:
 
 media:
   - type: "image"
-    url: "/images/case-study-dentsheet.svg"
-    alt: "DentSheet hail inspection estimate showing panel-level dent counts and consistent pricing"
+    url: "/images/case-study-dentsheet.jpg"
+    alt: "DentSheet public product page showing its hail inspection and estimating workflow"
     sort_order: 1
 
 published_at: "2026-08-11T12:00:00.000Z"
 created_at: "2026-08-11T12:00:00.000Z"
-updated_at: "2026-08-11T12:00:00.000Z"
+updated_at: "2026-08-14T16:00:00.000Z"

@@ -73,14 +73,18 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
       <AnimatedSection>
         <div className="flex flex-wrap gap-2">
           <Badge variant="secondary">{caseStudy.industry}</Badge>
-          {caseStudy.featured ? <Badge>Featured</Badge> : null}
+          {caseStudy.work_types.map((type) => <Badge key={type}>{type}</Badge>)}
           {!caseStudy.published ? <Badge variant="secondary">Draft preview</Badge> : null}
         </div>
         <h1 className="mt-5 text-balance text-4xl font-semibold text-slate-900 sm:text-5xl">{caseStudy.title}</h1>
         <p className="mt-4 text-lg text-slate-600">{caseStudy.summary}</p>
-        <p className="mt-3 text-sm text-slate-400">
-          Published {formatDate(caseStudy.published_at || caseStudy.updated_at)}
-        </p>
+        <p className="mt-3 text-sm text-slate-500">Case study updated {formatDate(caseStudy.updated_at)}</p>
+        {caseStudy.client_name ? (
+          <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600">
+            <span className="font-semibold text-slate-900">Client/product: {caseStudy.client_name}.</span>{" "}
+            This page describes work completed for this organization or product; it does not imply ownership by Ascent Business Solutions.
+          </div>
+        ) : null}
         {caseStudy.client_website ? (
           <Link
             href={caseStudy.client_website}
@@ -101,8 +105,8 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
                 <source src={media.url} type="video/mp4" />
               </video>
             ) : (
-              <div className="relative h-[320px] w-full sm:h-[440px]">
-                <Image src={media.url} alt={media.alt ?? caseStudy.title} fill className="object-cover" sizes="100vw" />
+              <div className="relative aspect-[16/9] w-full bg-slate-100">
+                <Image src={media.url} alt={media.alt ?? caseStudy.title} fill className="object-cover object-top" sizes="100vw" />
               </div>
             )}
           </div>
@@ -112,8 +116,8 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
       <AnimatedSection className="mt-10 grid gap-5 md:grid-cols-3">
         {caseStudy.metrics.map((metric) => (
           <Card key={metric.label} className="bg-blue-50">
-            <p className="text-xs uppercase tracking-wider text-blue-600">{metric.label}</p>
-            <p className="mt-2 text-3xl font-semibold text-slate-900">{metric.value}</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">Verified detail · {metric.label}</p>
+            <p className="mt-2 text-2xl font-semibold text-slate-900">{metric.value}</p>
           </Card>
         ))}
       </AnimatedSection>

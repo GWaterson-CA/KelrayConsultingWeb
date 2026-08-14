@@ -1,0 +1,71 @@
+title: "Kelray Heating Website & Heater Selection Wizard"
+client_name: "Kelray Heating"
+client_website: "https://www.kelrayheating.ca"
+summary: "Rebuilt Kelray Heating’s commerce website and created a guided selection tool that helps customers identify the right outdoor heater for their space."
+
+industry: "Manufacturing & E-Commerce"
+work_types:
+  - "Website rebuild"
+  - "Custom web tool"
+
+problem: |
+  Choosing an outdoor infrared heater requires more than selecting a product photo. Customers need to account for the size of the space, preferred units, installation conditions, and the heat coverage required for a useful result.
+
+  Kelray Heating needed a modern website that could present its heaters and sculptural firepits clearly while helping customers make a technically informed selection without beginning every enquiry from a blank page.
+
+approach: |
+  Ascent Business Solutions rebuilt the Kelray Heating website around the real purchase journey, including product discovery, education, regional commerce, project examples, and a direct path to the appropriate product range.
+
+  A custom Heater Selection Wizard turns a technical buying decision into a guided sequence. Customers choose their preferred measurement system and describe the space, allowing the tool to narrow the recommendation using inputs relevant to outdoor heating rather than a generic product quiz.
+
+deliverables:
+  - "Full commerce website rebuild"
+  - "Custom Heater Selection Wizard"
+  - "Residential, commercial, and industrial product journeys"
+  - "Multi-region and multi-currency storefront support"
+  - "Product education and project content"
+  - "Mobile-responsive buying experience"
+
+tools:
+  - "Shopify development"
+  - "Custom front-end tool development"
+  - "E-commerce information architecture"
+  - "Responsive design"
+  - "Technical product content design"
+
+results: |
+  Kelray Heating now has a product-led commerce experience that supports both straightforward shopping and more considered technical selection. The custom wizard gives customers a clear starting point for choosing a heater while the broader site explains material, durability, installation, and application differences.
+
+  The result is a website that does more than display products: it helps customers make a more informed decision and gives the Kelray team a structured way to support complex enquiries. [Try the Heater Selection Wizard](https://kelrayheating.ca/pages/heater-wizard).
+
+metrics:
+  - label: "Website scope"
+    value: "Full rebuild"
+    outcomeType: "revenue_growth"
+  - label: "Guided buying"
+    value: "Custom wizard"
+    outcomeType: "time_saved"
+  - label: "Commerce reach"
+    value: "Multi-region"
+    outcomeType: "revenue_growth"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "e-commerce"
+  - "shopify"
+  - "selection-wizard"
+  - "manufacturing"
+
+media:
+  - type: "image"
+    url: "/images/case-study-kelray-heating.jpg"
+    alt: "Kelray Heating website showing the first step of its custom Heater Selection Wizard"
+    sort_order: 1
+
+published_at: "2026-08-14T15:00:00.000Z"
+created_at: "2026-08-14T15:00:00.000Z"
+updated_at: "2026-08-14T15:00:00.000Z"

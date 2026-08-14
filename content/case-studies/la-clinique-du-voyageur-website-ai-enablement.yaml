@@ -1,0 +1,71 @@
+title: "La Clinique du Voyageur Website & AI Enablement"
+client_name: "La Clinique du Voyageur"
+client_website: "https://www.cliniqueduvoyageur.com"
+summary: "Rebuilt the Montréal travel clinic’s bilingual website and trained key staff to use AI for practical website management and internal tool creation."
+
+industry: "Healthcare Services"
+work_types:
+  - "Website rebuild"
+  - "AI training"
+
+problem: |
+  La Clinique du Voyageur serves patients in both French and English, with information spanning travel consultations, vaccinations, opening hours, contact details, and appointment access. Keeping that information clear and current is operational work, not just a one-time design exercise.
+
+  The clinic needed a rebuilt website as well as the internal confidence to manage its content and use AI safely for practical business tasks after delivery.
+
+approach: |
+  Ascent Business Solutions rebuilt the clinic website around bilingual patient information and clear access to appointment booking, services, vaccination guidance, contact details, and hours.
+
+  The engagement also included hands-on training for key staff. Sessions focused on using AI to support website management, create small internal tools, and turn routine operational needs into practical workflows the clinic could continue developing rather than outsourcing every change.
+
+deliverables:
+  - "Bilingual clinic website rebuild"
+  - "Service, vaccination, contact, and appointment pathways"
+  - "Mobile-responsive public information"
+  - "Hands-on AI training for key staff"
+  - "Website management enablement"
+  - "Practical internal-tool building guidance"
+
+tools:
+  - "Website design and development"
+  - "Bilingual content architecture"
+  - "Staff AI training"
+  - "No-code and AI-assisted tool building"
+  - "Website management documentation"
+
+results: |
+  La Clinique du Voyageur received both a rebuilt public website and a more capable internal team. Patients have a bilingual path to essential clinic information, while trained staff can manage the site and use AI to support new tools and operational improvements.
+
+  The project was designed to reduce long-term dependence on outside technical help by pairing the website delivery with practical capability transfer. [Visit La Clinique du Voyageur](https://www.cliniqueduvoyageur.com).
+
+metrics:
+  - label: "Website"
+    value: "Full rebuild"
+    outcomeType: "risk_reduction"
+  - label: "Patient content"
+    value: "French + English"
+    outcomeType: "risk_reduction"
+  - label: "Staff capability"
+    value: "AI-enabled"
+    outcomeType: "time_saved"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "healthcare"
+  - "bilingual-website"
+  - "ai-training"
+  - "staff-enablement"
+
+media:
+  - type: "image"
+    url: "/images/case-study-la-clinique-du-voyageur.jpg"
+    alt: "La Clinique du Voyageur bilingual travel health and vaccination website"
+    sort_order: 1
+
+published_at: "2026-08-14T11:00:00.000Z"
+created_at: "2026-08-14T11:00:00.000Z"
+updated_at: "2026-08-14T11:00:00.000Z"

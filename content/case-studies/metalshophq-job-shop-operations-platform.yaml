@@ -4,6 +4,9 @@ client_website: "https://www.metalshophq.com/en"
 summary: "Designed and built a purpose-built operations platform that carries metal fabrication jobs from quote to shipped, with jobs, time, drawings, inventory, purchasing, and costing in one shared system."
 
 industry: "Manufacturing & Distribution"
+work_types:
+  - "Product build"
+  - "Operations platform"
 
 problem: |
   Metal fabrication job shops often run active work across paper travellers, spreadsheets, shared drives, accounting software, and verbal updates from the floor. The result is a familiar set of problems: the office cannot see job status without asking, drawings become separated from the work, actual costs are difficult to compare with the quote, and supplier price history is lost between jobs.
@@ -61,10 +64,10 @@ tags:
 
 media:
   - type: "image"
-    url: "/images/case-study-metalshophq.svg"
-    alt: "MetalShopHQ job board showing metal fabrication work moving from quote to shipped"
+    url: "/images/case-study-metalshophq.jpg"
+    alt: "MetalShopHQ public product page showing a shared metal fabrication job dashboard"
     sort_order: 1
 
 published_at: "2026-08-11T12:00:00.000Z"
 created_at: "2026-08-11T12:00:00.000Z"
-updated_at: "2026-08-11T12:00:00.000Z"
+updated_at: "2026-08-14T16:00:00.000Z"

@@ -23,6 +23,7 @@ export type CaseStudy = {
   client_website: string | null;
   summary: string;
   industry: string;
+  work_types: string[];
   problem: string;
   approach: string;
   deliverables: string[];

@@ -95,6 +95,23 @@ export const trustedTeams: TrustedTeam[] = [
   },
   {
     name: "MetalQuoteHQ",
+    website: "https://www.metalquotehq.com",
+  },
+  {
+    name: "MetalCutHQ",
+    website: "https://www.metalcuthq.com",
+  },
+  {
+    name: "Leon Lebeniste",
+    website: "https://www.leonlebeniste.com",
+  },
+  {
+    name: "Fast Fun Learning",
+    website: "https://www.fastfunlearning.com",
+  },
+  {
+    name: "La Clinique du Voyageur",
+    website: "https://www.cliniqueduvoyageur.com",
   },
   {
     name: "MayDay Metals",
@@ -116,24 +133,6 @@ export const trustedTeams: TrustedTeam[] = [
     website: "https://www.vistasecurity.ca",
     logoUrl:
       "https://static1.squarespace.com/static/608b2c7e845e223dfb473325/t/60f0db492606b657d3530810/1626397513149/Vistasecurityca_print.png?format=1500w",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "We moved from scattered AI experiments to a clear operating system that actually saves our team time every week.",
-    name: "COO, Professional Services Firm",
-  },
-  {
-    quote:
-      "The engagement paid for itself in one quarter through faster turnaround and lower manual workload.",
-    name: "Director of Operations, Distribution Company",
-  },
-  {
-    quote:
-      "The training made adoption easy. Teams understood both how to use AI and when not to use it.",
-    name: "Founder, Multi-location Services Business",
   },
 ];
 

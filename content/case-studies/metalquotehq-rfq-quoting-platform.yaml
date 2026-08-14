@@ -1,0 +1,71 @@
+title: "MetalQuoteHQ RFQ Quoting Platform"
+client_name: "MetalQuoteHQ"
+client_website: "https://www.metalquotehq.com"
+summary: "A quoting platform for metal suppliers that turns incoming RFQs into structured line items, supplier comparisons, marked-up pricing, and customer-ready quotes."
+
+industry: "Manufacturing & Distribution"
+work_types:
+  - "Product build"
+  - "AI document workflow"
+
+problem: |
+  Metal suppliers and service centres receive requests in inconsistent formats: pasted email text, PDFs, photographs, and handwritten or abbreviated line items. Turning each request into a customer quote means re-keying the request, asking multiple suppliers for prices, comparing responses, applying markup, and preparing a clean document.
+
+  MetalQuoteHQ needed to bring that entire middle section of the quote into one traceable workflow while preserving the trade-specific details that generic quoting tools miss.
+
+approach: |
+  The product was designed around the real path from inbound RFQ to outbound customer quote. AI-assisted intake converts text, PDFs, and photographs into structured metal line items for review. Users can then create tailored supplier RFQs, capture returned prices, compare cost and lead time line by line, select the appropriate source, and apply markup.
+
+  Each entered supplier price also contributes to item-level price history, giving the team useful context the next time the same material appears. Sent quotes retain a snapshot of the selected costs so historical documents do not drift as pricing changes.
+
+deliverables:
+  - "AI-assisted RFQ intake from text, PDF, and photographs"
+  - "Supplier-specific RFQ generation and response tracking"
+  - "Line-by-line supplier price comparison"
+  - "Markup and customer quote generation"
+  - "Item catalogue and supplier price history"
+  - "Multi-user shop roles and account structure"
+
+tools:
+  - "Custom web application development"
+  - "AI document and image extraction"
+  - "Quotation workflow design"
+  - "PDF document generation"
+  - "Historical pricing data design"
+
+results: |
+  MetalQuoteHQ launched in early access as a working quoting product for metal suppliers and service centres. It gives estimators one connected workflow for intake, supplier pricing, comparison, markup, and customer output.
+
+  The result replaces a chain of inbox searches, spreadsheets, and copied documents with a structured product designed around metal line items and supplier relationships. [Explore MetalQuoteHQ](https://www.metalquotehq.com).
+
+metrics:
+  - label: "RFQ intake"
+    value: "Text, PDF, photo"
+    outcomeType: "time_saved"
+  - label: "Price comparison"
+    value: "Line by line"
+    outcomeType: "risk_reduction"
+  - label: "Customer output"
+    value: "Ready to send"
+    outcomeType: "time_saved"
+
+testimonial_quote: null
+
+featured: false
+published: true
+
+tags:
+  - "manufacturing"
+  - "quoting"
+  - "ai-document-ingest"
+  - "supplier-pricing"
+
+media:
+  - type: "image"
+    url: "/images/case-study-metalquotehq.jpg"
+    alt: "MetalQuoteHQ public product page showing an RFQ converted into a line-by-line supplier price matrix"
+    sort_order: 1
+
+published_at: "2026-08-14T13:00:00.000Z"
+created_at: "2026-08-14T13:00:00.000Z"
+updated_at: "2026-08-14T13:00:00.000Z"

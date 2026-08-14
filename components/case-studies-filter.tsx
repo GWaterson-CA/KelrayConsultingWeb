@@ -4,36 +4,32 @@ import { useMemo, useState } from "react";
 
 import { CaseStudyCard } from "@/components/case-study-card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import type { CaseStudy, OutcomeType } from "@/lib/types";
+import type { CaseStudy } from "@/lib/types";
 
 type CaseStudiesFilterProps = {
   caseStudies: CaseStudy[];
 };
 
-const outcomeOptions: { label: string; value: OutcomeType }[] = [
-  { label: "Time saved", value: "time_saved" },
-  { label: "Cost reduced", value: "cost_reduced" },
-  { label: "Revenue growth", value: "revenue_growth" },
-  { label: "Risk reduction", value: "risk_reduction" },
-];
-
 export function CaseStudiesFilter({ caseStudies }: CaseStudiesFilterProps) {
   const [industry, setIndustry] = useState<string>("all");
-  const [outcome, setOutcome] = useState<string>("all");
+  const [workType, setWorkType] = useState<string>("all");
 
   const industries = useMemo(() => {
     return Array.from(new Set(caseStudies.map((study) => study.industry))).sort();
   }, [caseStudies]);
 
+  const workTypes = useMemo(() => {
+    return Array.from(new Set(caseStudies.flatMap((study) => study.work_types))).sort();
+  }, [caseStudies]);
+
   const filtered = useMemo(() => {
     return caseStudies.filter((study) => {
       const industryPass = industry === "all" || study.industry === industry;
-      const outcomePass =
-        outcome === "all" || study.metrics.some((metric) => metric.outcomeType === (outcome as OutcomeType));
+      const workTypePass = workType === "all" || study.work_types.includes(workType);
 
-      return industryPass && outcomePass;
+      return industryPass && workTypePass;
     });
-  }, [caseStudies, industry, outcome]);
+  }, [caseStudies, industry, workType]);
 
   return (
     <div className="space-y-8">
@@ -52,15 +48,15 @@ export function CaseStudiesFilter({ caseStudies }: CaseStudiesFilterProps) {
           </SelectContent>
         </Select>
 
-        <Select value={outcome} onValueChange={setOutcome}>
+        <Select value={workType} onValueChange={setWorkType}>
           <SelectTrigger>
-            <SelectValue placeholder="Filter by outcome" />
+            <SelectValue placeholder="Filter by work type" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All outcomes</SelectItem>
-            {outcomeOptions.map((option) => (
-              <SelectItem key={option.value} value={option.value}>
-                {option.label}
+            <SelectItem value="all">All work types</SelectItem>
+            {workTypes.map((item) => (
+              <SelectItem key={item} value={item}>
+                {item}
               </SelectItem>
             ))}
           </SelectContent>

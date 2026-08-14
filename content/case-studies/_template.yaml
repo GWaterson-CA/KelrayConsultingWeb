@@ -14,6 +14,8 @@ title: ""
 summary: "" # 1-2 sentence overview shown on cards and in meta descriptions
 
 industry: "" # e.g. "Manufacturing & Distribution", "Professional Services", "Retail & E-Commerce"
+work_types: # concise, user-facing engagement types shown in filters and badges
+  - "Product build"
 
 # Use | for multi-line content. Markdown formatting is supported.
 problem: |

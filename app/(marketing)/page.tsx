@@ -128,19 +128,19 @@ export default async function HomePage() {
         <AnimatedSection delay={0.15}>
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.06] p-3 shadow-2xl">
             <div className="flex items-center justify-between gap-4 px-3 pb-3 pt-1 text-xs">
-              <span className="font-semibold uppercase tracking-[0.16em] text-emerald-300">Real client build</span>
-              <span className="text-slate-400">Leon Lebeniste distributor portal</span>
+              <span className="font-semibold uppercase tracking-[0.16em] text-emerald-300">Inside a real client build</span>
+              <span className="text-slate-400">Confidential details obscured</span>
             </div>
             <Image
-              src="/images/case-study-LL-Portal.png"
-              alt="Leon Lebeniste custom distributor ordering portal built by Ascent Business Solutions"
-              width={1200}
-              height={800}
-              className="max-h-[430px] w-full rounded-2xl bg-white object-contain"
+              src="/images/leon-lebeniste-portal-sanitized.jpg"
+              alt="Sanitized Leon Lebeniste distributor ordering portal with confidential products and pricing intentionally obscured"
+              width={1265}
+              height={1101}
+              className="aspect-[16/10] w-full rounded-2xl bg-white object-cover object-top"
               priority
             />
             <div className="flex flex-wrap items-center justify-between gap-2 px-3 pb-1 pt-3 text-sm text-slate-300">
-              <span>Working prototype in 2 business days</span>
+              <span>Private catalogue · tiered pricing · order workflow</span>
               <Link href="/case-studies/LeonLebenistePortal" className="font-medium text-emerald-300 hover:text-emerald-200">Read the case study →</Link>
             </div>
           </div>
@@ -165,8 +165,8 @@ export default async function HomePage() {
         <AnimatedSection>
           <SectionHeading
             badge="Real client work"
-            title="See the systems behind the claims"
-            description="Named products, visible workflows, and results we can explain. Explore the work before you book a conversation."
+            title="Named clients. Working products. Evidence you can inspect."
+            description="Every featured case study shows a real product or sanitized client workflow and distinguishes shipped capabilities from measured outcomes."
           />
         </AnimatedSection>
         <div className="mt-10">
