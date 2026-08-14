@@ -7,10 +7,10 @@ Portfolio imagery is kept locally so case-study pages do not depend on a client 
 - `case-study-metalshophq.jpg` — https://www.metalshophq.com/en
 - `case-study-dentsheet.jpg` — https://www.dentsheet.com
 - `case-study-frothmonkey.png` — https://www.frothmonkey.com/opengraph-image
-- `case-study-kelray-heating.jpg` — https://kelrayheating.ca/pages/heater-wizard
+- `case-study-kelray-heating-homepage.png` — https://www.kelrayheating.ca (homepage hero image)
 - `case-study-metalquotehq.jpg` — https://www.metalquotehq.com
 - `case-study-metalcuthq.jpg` — https://www.metalcuthq.com
-- `case-study-la-clinique-du-voyageur.jpg` — https://www.cliniqueduvoyageur.com
+- `case-study-la-clinique-du-voyageur-new-site.jpg` — locally rendered from the in-progress redesigned website
 
 Captured August 14, 2026 from public-facing pages. Product names and interface copy remain the property of their respective organizations.
 

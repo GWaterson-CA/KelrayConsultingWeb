@@ -62,8 +62,8 @@ tags:
 
 media:
   - type: "image"
-    url: "/images/case-study-kelray-heating.jpg"
-    alt: "Kelray Heating website showing the first step of its custom Heater Selection Wizard"
+    url: "/images/case-study-kelray-heating-homepage.png"
+    alt: "A Kelray outdoor infrared heater installed beneath a covered patio"
     sort_order: 1
 
 published_at: "2026-08-14T15:00:00.000Z"

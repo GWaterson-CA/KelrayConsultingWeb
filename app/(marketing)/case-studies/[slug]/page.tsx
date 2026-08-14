@@ -64,6 +64,15 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
       "@type": "Organization",
       name: BRAND.name,
     },
+    ...(caseStudy.client_name
+      ? {
+          mentions: {
+            "@type": "Thing",
+            name: caseStudy.client_name,
+            ...(caseStudy.client_website ? { url: caseStudy.client_website } : {}),
+          },
+        }
+      : {}),
   };
 
   return (
@@ -89,7 +98,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
           <Link
             href={caseStudy.client_website}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="mt-4 inline-flex text-sm font-medium text-blue-600 hover:text-blue-700"
           >
             Visit {caseStudy.client_name || "client website"} ↗

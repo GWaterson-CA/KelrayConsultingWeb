@@ -41,9 +41,21 @@ export function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
             </span>
           ))}
         </div>
-        <Link href={`/case-studies/${caseStudy.slug}`} className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">
-          See what was built →
-        </Link>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <Link href={`/case-studies/${caseStudy.slug}`} className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">
+            Read the case study →
+          </Link>
+          {caseStudy.client_website ? (
+            <Link
+              href={caseStudy.client_website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-medium text-slate-600 hover:text-blue-700"
+            >
+              Visit {clientLabel} ↗
+            </Link>
+          ) : null}
+        </div>
       </div>
     </Card>
   );
