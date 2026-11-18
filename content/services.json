@@ -1,0 +1,49 @@
+[
+  {
+    "id": "part-time",
+    "label": "Part-time AI support",
+    "headline": "Start with a task you know well.",
+    "fit": "You’re interested in AI and would like someone to work alongside you. You can start with a customer question or a weekly chore, even if you’ve never used an AI tool.",
+    "deliver": "Say your team answers the same product questions every week. Together, we can try drafting replies from your product information, show staff how to check the answers, and see whether it saves time. If it helps, we can stay involved part-time. We agree on priorities, time, and budget with you each month."
+  },
+  {
+    "id": "automation",
+    "label": "Custom tools & automation",
+    "headline": "Stop typing the same quote twice.",
+    "fit": "You copy figures between an inbox, a spreadsheet, and a customer document. Each handoff is another place to miss a change.",
+    "deliver": "A working tool that follows your rules, connects the systems you use, and gives the next person the information they need.",
+    "example": "quote",
+    "shot": 1,
+    "caption": "MetalQuoteHQ puts each supplier’s price beside the material it covers."
+  },
+  {
+    "id": "websites",
+    "label": "Websites & buying tools",
+    "headline": "Help customers make the next decision.",
+    "fit": "Buyers keep calling to ask which product fits, or visitors reach your site and still don’t know which service to request.",
+    "deliver": "A clear path from a customer’s question to a useful answer. That might be a product planner, a bilingual booking page, or a service-specific enquiry.",
+    "example": "kelray",
+    "shot": 1,
+    "caption": "Kelray’s planner shows shoppers how a heater fits their outdoor space."
+  },
+  {
+    "id": "training",
+    "label": "Hands-on AI training",
+    "headline": "Learn AI on work your team already knows.",
+    "fit": "People are trying AI on their own, but they need practice choosing a task, checking the output, and using it again.",
+    "deliver": "Hands-on sessions tailored to each role, using examples from your own operation. We practise together so staff can repeat the workflow afterwards.",
+    "example": "clinic",
+    "shot": 0,
+    "caption": "La Clinique du Voyageur paired its website rebuild with training for the staff who maintain it."
+  },
+  {
+    "id": "strategy",
+    "label": "AI strategy workshops",
+    "headline": "Choose one AI project worth testing.",
+    "fit": "You see several opportunities but need to decide what to try first, what data it will take, and how to tell if it worked.",
+    "deliver": "A prioritized plan from a focused workshop. We map the task, agree on a small pilot, and define what your team will measure.",
+    "example": "leon",
+    "shot": 0,
+    "caption": "An example of starting small. Leon Lebeniste had a distributor-ordering prototype to test in two business days."
+  }
+]

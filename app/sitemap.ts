@@ -1,16 +1,15 @@
 import type { MetadataRoute } from "next";
 
-import { BRAND } from "@/lib/brand";
+import { siteUrl } from "@/lib/brand";
 import { getPublishedCaseStudies } from "@/lib/data";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || BRAND.siteUrl).replace(/\/+$/, "");
   const staticRoutes = ["", "/services", "/case-studies", "/about", "/book", "/contact", "/privacy", "/security-data"];
   const caseStudies = await getPublishedCaseStudies();
 
   const staticEntries = staticRoutes.map((route) => ({
     url: `${siteUrl}${route}`,
-    lastModified: new Date(),
+    ...(["", "/services", "/case-studies", "/about", "/book"].includes(route) && { lastModified: "2026-11-17" }),
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.7,
   })) as MetadataRoute.Sitemap;

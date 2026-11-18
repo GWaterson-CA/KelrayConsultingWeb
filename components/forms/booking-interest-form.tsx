@@ -1,108 +1,54 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2 } from "lucide-react";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useState, type FormEvent } from "react";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { bookingInterestSchema, type BookingInterestValues } from "@/lib/schemas";
-
-type BookingInterestFormProps = {
-  callType: "free_intro" | "existing_client_paid";
-  title: string;
-  description: string;
-};
-
-export function BookingInterestForm({ callType, title, description }: BookingInterestFormProps) {
-  const [status, setStatus] = useState<{ ok: boolean; message: string } | null>(null);
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<BookingInterestValues>({
-    resolver: zodResolver(bookingInterestSchema),
-    defaultValues: {
-      callType,
-    },
-  });
-
-  async function onSubmit(values: BookingInterestValues) {
-    setStatus(null);
-
-    const response = await fetch("/api/booking-interest", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(values),
-    });
-
-    const payload = (await response.json()) as { message: string };
-
-    if (!response.ok) {
-      setStatus({ ok: false, message: payload.message || "Unable to submit. Please try again." });
-      return;
+export function BookingInterestForm() {
+  const [sending, setSending] = useState(false);
+  const [message, setMessage] = useState("");
+  async function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const fields = new FormData(form);
+    setSending(true);
+    setMessage("");
+    try {
+      const response = await fetch("/api/booking-interest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...Object.fromEntries(fields),
+          callType: "free_intro",
+        }),
+      });
+      const result = await response.json();
+      setMessage(result.message);
+      if (response.ok) form.reset();
+    } catch {
+      setMessage(
+        "We couldn’t send your request. Please try again or email hello@ascentbusinesssolutions.ca.",
+      );
+    } finally {
+      setSending(false);
     }
-
-    setStatus({ ok: true, message: payload.message || "Request received." });
-    reset({ callType });
   }
-
   return (
-    <div className="rounded-3xl border border-slate-200 bg-white shadow-sm p-6">
-      <h3 className="text-xl font-semibold text-slate-900">{title}</h3>
-      <p className="mt-2 text-sm text-slate-600">{description}</p>
-
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-5 space-y-4">
-        <input type="hidden" value={callType} {...register("callType")} />
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="space-y-2">
-            <Label htmlFor={`${callType}-name`}>Name</Label>
-            <Input id={`${callType}-name`} {...register("name")} />
-            {errors.name ? <p className="text-xs text-rose-500">{errors.name.message}</p> : null}
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor={`${callType}-email`}>Email</Label>
-            <Input id={`${callType}-email`} type="email" {...register("email")} />
-            {errors.email ? <p className="text-xs text-rose-500">{errors.email.message}</p> : null}
-          </div>
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor={`${callType}-phone`}>Phone (optional)</Label>
-          <Input id={`${callType}-phone`} type="tel" {...register("phone")} />
-          {errors.phone ? <p className="text-xs text-rose-500">{errors.phone.message}</p> : null}
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor={`${callType}-company`}>Company</Label>
-          <Input id={`${callType}-company`} {...register("company")} />
-          {errors.company ? <p className="text-xs text-rose-500">{errors.company.message}</p> : null}
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor={`${callType}-details`}>Details</Label>
-          <Textarea
-            id={`${callType}-details`}
-            {...register("details")}
-            placeholder="Share the outcomes you want, timeline, and preferred call slots."
-          />
-          {errors.details ? <p className="text-xs text-rose-500">{errors.details.message}</p> : null}
-        </div>
-
-        <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-          Submit request
-        </Button>
-
-        {status ? (
-          <p className={status.ok ? "text-sm text-emerald-600" : "text-sm text-rose-500"}>{status.message}</p>
-        ) : null}
-      </form>
-    </div>
+    <form onSubmit={submit} className="request-form">
+      <label>
+        Name
+        <input name="name" required minLength={2} autoComplete="name" />
+      </label>
+      <label>
+        Email
+        <input name="email" required type="email" autoComplete="email" />
+      </label>
+      <label>
+        What’s slowing your team down?
+        <textarea name="details" rows={4} required minLength={10} />
+      </label>
+      <button className="primary" disabled={sending}>
+        {sending ? "Sending…" : "Request a call"}
+      </button>
+      <p role="status">{message}</p>
+    </form>
   );
 }

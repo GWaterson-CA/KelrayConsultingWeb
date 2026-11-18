@@ -1,143 +1,114 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-
-import { AnimatedSection } from "@/components/animated-section";
-import { SectionHeading } from "@/components/section-heading";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { services } from "@/lib/site-content";
+import offers from "@/content/services.json";
+import projects from "@/content/showcase.json";
+import { CallStrip } from "@/components/call-strip";
 
 export const metadata: Metadata = {
-  title: "AI Services — Custom Tools, Team Training & Automation",
+  title: "Services — Part-Time AI Support, Custom Tools, Websites & Training",
   description:
-    "Custom AI tool development, hands-on team training, process automation, and strategic consulting for businesses that want results without hiring full-time AI staff.",
+    "Choose part-time AI support, a custom workflow, a website, hands-on team training, or a strategy workshop. See what each engagement includes.",
   alternates: { canonical: "/services" },
 };
 
-const engagementOptions = [
-  {
-    title: "Strategy Workshop",
-    outcome: "A clear AI roadmap in 1-2 weeks",
-    commercialModel: "Fixed scope and investment agreed before kickoff",
-    deliverables: "We review your operations, identify the best AI opportunities, and give you a prioritized action plan you can start on immediately.",
-    useCase: "Best if you know AI could help but aren't sure where to start.",
-  },
-  {
-    title: "Ongoing Partnership",
-    outcome: "A dedicated AI specialist working with your team",
-    commercialModel: "Monthly capacity and priorities agreed in advance",
-    deliverables: "Monthly implementation cycles, team training sessions, and continuous improvement — like having an AI department without the overhead.",
-    useCase: "Best if you want to roll out AI across your business over time.",
-  },
-  {
-    title: "Project Build",
-    outcome: "A specific tool or automation, built and delivered",
-    commercialModel: "Milestone-based proposal after a focused discovery",
-    deliverables: "We design, build, test, and hand off a working solution — including training your team to use and maintain it.",
-    useCase: "Best if you have a specific problem you want solved with AI.",
-  },
-];
-
-const faqs = [
-  {
-    q: "How quickly will we see results?",
-    a: "Most clients see tangible value within 2-6 weeks. We start with a quick pilot so you get a real win early on before committing to anything bigger.",
-  },
-  {
-    q: "Do we need technical staff to work with you?",
-    a: "Not at all. We work directly with business owners, managers, and front-line teams. You don't need any AI expertise — that's what we bring.",
-  },
-  {
-    q: "Can you just train our team without building tools?",
-    a: "Absolutely. Training-only engagements are one of our most popular options. We tailor workshops to each role so everyone learns what's relevant to their actual work.",
-  },
-  {
-    q: "What size of business do you work with?",
-    a: "Typically 5 to 500 employees. We're a great fit for businesses too small for a dedicated AI hire but big enough that manual work is costing you real money.",
-  },
-  {
-    q: "What if we've already tried AI tools and they didn't stick?",
-    a: "That's one of the most common situations we see. Usually the tools weren't connected to real workflows or the team wasn't trained properly. We fix both.",
-  },
-];
-
-export default function ServicesPage() {
+export default async function ServicesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string }>;
+}) {
+  const { service } = await searchParams;
+  const selected =
+    offers.find((offer) => offer.id === service) ??
+    offers.find((offer) => offer.id === "automation")!;
+  const example = projects.find((p) => p.id === selected.example);
+  const shot = example?.shots[selected.shot ?? 0];
   return (
-    <div className="mx-auto max-w-7xl px-6 pb-24 pt-16 lg:px-10">
-      <AnimatedSection>
-        <SectionHeading
-          badge="Services"
-          title="Everything you'd want from an AI specialist on your team."
-          description="Whether you need one custom tool or a full AI rollout, we handle the technical work while keeping your team in the loop and in control."
-        />
-      </AnimatedSection>
-
-      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((service, index) => (
-          <AnimatedSection key={service.title} delay={index * 0.04}>
-            <Card className="h-full">
-              <service.icon className="h-6 w-6 text-blue-500" />
-              <h3 className="mt-4 text-xl font-semibold text-slate-900">{service.title}</h3>
-              <p className="mt-3 text-sm text-slate-600">{service.description}</p>
-            </Card>
-          </AnimatedSection>
-        ))}
-      </div>
-
-      <section className="mt-20">
-        <AnimatedSection>
-          <SectionHeading
-            badge="Ways to work together"
-            title="Pick the approach that fits your business"
-            description="No long-term contracts required. Start small or go all-in — whatever makes sense for where you are right now."
-          />
-        </AnimatedSection>
-
-        <div className="mt-8 grid gap-5 lg:grid-cols-3">
-          {engagementOptions.map((option, index) => (
-            <AnimatedSection key={option.title} delay={index * 0.05}>
-              <Card className="h-full">
-                <h3 className="text-xl font-semibold text-slate-900">{option.title}</h3>
-                <p className="mt-3 text-sm text-blue-600">Outcome: {option.outcome}</p>
-                <p className="mt-3 text-sm text-slate-600">Commercial model: {option.commercialModel}</p>
-                <p className="mt-4 text-sm text-slate-600">Deliverables: {option.deliverables}</p>
-                <p className="mt-4 text-sm text-slate-600">Use case: {option.useCase}</p>
-              </Card>
-            </AnimatedSection>
-          ))}
-        </div>
-        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-slate-600">
-          Every proposal states the scope, timeline, total investment, assumptions, and optional support before work begins. Custom-build pricing follows the workflow, integrations, and delivery risk—not the size of your company or what we think you might pay.
+    <div className="ascent">
+      <section className="svc-page wrap">
+        <h1>Our services</h1>
+        <p className="svc-intro">
+          Bring us a task that eats up your week, a website your customers
+          struggle with, or a team ready to learn.
         </p>
-      </section>
-
-      <section className="mt-20">
-        <AnimatedSection>
-          <SectionHeading badge="FAQs" title="Common questions before kickoff" />
-        </AnimatedSection>
-
-        <AnimatedSection className="mt-6 rounded-3xl border border-slate-200 bg-white px-6">
-          <Accordion type="single" collapsible>
-            {faqs.map((faq, index) => (
-              <AccordionItem key={faq.q} value={`item-${index}`}>
-                <AccordionTrigger>{faq.q}</AccordionTrigger>
-                <AccordionContent>{faq.a}</AccordionContent>
-              </AccordionItem>
+        <div className="svc-browser">
+          <nav className="svc-choices" aria-label="Explore a service">
+            {offers.map((offer) => (
+              <Link
+                key={offer.id}
+                href={"/services?service=" + offer.id + "#service-panel"}
+                aria-current={offer.id === selected.id ? "true" : undefined}
+              >
+                {offer.label}
+                <span aria-hidden="true">→</span>
+              </Link>
             ))}
-          </Accordion>
-        </AnimatedSection>
+          </nav>
+          <div className="svc-panel" id="service-panel">
+            <h2>{selected.headline}</h2>
+            <div className="svc-answer">
+              <h3>When it fits</h3>
+              <p>{selected.fit}</p>
+            </div>
+            <div className="svc-answer">
+              <h3>What you get</h3>
+              <p>{selected.deliver}</p>
+            </div>
+            {!example || !shot ? (
+              <Link className="primary support-cta" href="/book">
+                Request a 20-minute call →
+              </Link>
+            ) : (
+              <Link
+                className="svc-proof"
+                href={"/case-studies?project=" + example.id + "#project-story"}
+              >
+                <Image
+                  unoptimized
+                  width={820}
+                  height={535}
+                  src={shot.src}
+                  alt={example.name + " — " + shot.label}
+                />
+                <span>
+                  <strong>{example.name} ↗</strong>
+                  <span>{selected.caption}</span>
+                </span>
+              </Link>
+            )}
+          </div>
+        </div>
+        <div className="svc-faq">
+          <h2>Before we start</h2>
+          <details>
+            <summary>What happens on the first call?</summary>
+            <p>
+              Bring one example, such as a quote you prepare by hand or a
+              question customers keep asking. In 20 minutes we’ll talk through
+              how it works today and decide whether part-time support, a
+              workshop, or a build would help.
+            </p>
+          </details>
+          <details>
+            <summary>How do you scope and price the work?</summary>
+            <p>
+              For part-time support, we agree on monthly capacity and
+              priorities. Workshops have an agreed scope. For a build, we review
+              the workflow and propose milestones. You see the deliverables,
+              timing, cost, and any ongoing support before committing.
+            </p>
+          </details>
+          <details>
+            <summary>Can our team run it afterwards?</summary>
+            <p>
+              We plan the handoff with you. For a tool or website, that covers
+              administrator access, documentation, and practice with the tasks
+              your team will own. Ongoing help is available if you want it.
+            </p>
+          </details>
+        </div>{" "}
       </section>
-
-      <AnimatedSection className="mt-16 rounded-3xl border border-blue-200 bg-gradient-to-r from-blue-50 to-sky-50 p-8">
-        <h2 className="text-3xl font-semibold text-slate-900">Not sure where to start? That&apos;s literally what the intro is for.</h2>
-        <p className="mt-3 text-slate-600">
-          Start with a focused 20-minute fit call. We&apos;ll understand the workflow, determine whether we can help, and agree on the next useful step.
-        </p>
-        <Button asChild className="mt-6">
-          <Link href="/book">Book a fit call</Link>
-        </Button>
-      </AnimatedSection>
+      <CallStrip />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat } from "next/font/google";
 
 import { AnalyticsConsent } from "@/components/analytics-consent";
-import { BRAND } from "@/lib/brand";
+import { BRAND, siteUrl } from "@/lib/brand";
 
 import "./globals.css";
 
@@ -18,7 +18,6 @@ const bodyFont = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || BRAND.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

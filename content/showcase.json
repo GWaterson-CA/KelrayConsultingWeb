@@ -1,0 +1,234 @@
+[
+  {
+    "id": "dent",
+    "name": "DentSheet",
+    "kind": "Tools",
+    "type": "Hail repair",
+    "color": "#46778b",
+    "title": "From dent count to repair estimate.",
+    "build": "A phone-based inspection tool connects panel photos and dent counts to the estimate, repair record, and invoice.",
+    "benefit": "The estimator and body shop work from the same figures. A rate change keeps the original estimate intact.",
+    "shots": [
+      {
+        "label": "Inspection",
+        "portrait": true,
+        "src": "/images/work/dent-1.webp"
+      },
+      {
+        "label": "Estimate",
+        "portrait": false,
+        "src": "/images/work/dent-2.webp"
+      },
+      {
+        "label": "Invoice",
+        "portrait": false,
+        "src": "/images/work/dent-3.webp"
+      }
+    ],
+    "slug": "dentsheet-hail-inspection-estimating-platform"
+  },
+  {
+    "id": "shop",
+    "name": "MetalShopHQ",
+    "kind": "Tools",
+    "type": "Shop operations",
+    "color": "#687d6e",
+    "title": "Follow a fabrication job from quote to shipment.",
+    "build": "A shared job board keeps drawings, time entries, purchasing, and costs with each fabrication job.",
+    "benefit": "The office can see what’s on the floor, and operators can open the drawing and work plan for the job in front of them.",
+    "shots": [
+      {
+        "label": "Job board",
+        "portrait": false,
+        "src": "/images/work/shop-1.webp"
+      },
+      {
+        "label": "Job workspace",
+        "portrait": false,
+        "src": "/images/work/shop-2.webp"
+      },
+      {
+        "label": "Work plan",
+        "portrait": false,
+        "src": "/images/work/shop-3.webp"
+      }
+    ],
+    "slug": "metalshophq-job-shop-operations-platform"
+  },
+  {
+    "id": "clinic",
+    "name": "La Clinique du Voyageur",
+    "kind": "Websites",
+    "type": "Travel health",
+    "color": "#ab7d46",
+    "title": "Help travellers find care in two languages.",
+    "build": "We rebuilt the Montréal clinic’s French and English website and trained staff to use AI for content updates and small internal tools.",
+    "benefit": "Travellers can find services and booking information in their language. Staff have the skills to keep those details current.",
+    "shots": [
+      {
+        "label": "English homepage",
+        "portrait": false,
+        "src": "/images/work/clinic-1.webp"
+      },
+      {
+        "label": "French services",
+        "portrait": false,
+        "src": "/images/work/clinic-2.webp"
+      }
+    ],
+    "slug": "la-clinique-du-voyageur-website-ai-enablement"
+  },
+  {
+    "id": "quote",
+    "name": "MetalQuoteHQ",
+    "kind": "Tools",
+    "type": "Supplier quoting",
+    "color": "#6066b0",
+    "title": "Turn a messy request into a priced quote.",
+    "build": "Estimators can import an email, photo, or PDF, review its metal line items, compare supplier prices, and issue a customer quote.",
+    "benefit": "Each price sits beside the material it covers. The estimator can choose a supplier and apply markup without rebuilding the quote in a spreadsheet.",
+    "shots": [
+      {
+        "label": "Request intake",
+        "portrait": false,
+        "src": "/images/work/quote-1.webp"
+      },
+      {
+        "label": "Supplier comparison",
+        "portrait": false,
+        "src": "/images/work/quote-2.webp"
+      },
+      {
+        "label": "Customer quote",
+        "portrait": false,
+        "src": "/images/work/quote-3.webp"
+      }
+    ],
+    "slug": "metalquotehq-rfq-quoting-platform"
+  },
+  {
+    "id": "froth",
+    "name": "FrothMonkey",
+    "kind": "Tools",
+    "type": "Local marketplace",
+    "color": "#7174ac",
+    "title": "Match what someone wants with what’s nearby.",
+    "build": "We built a marketplace where people post what they want or have. AI suggests relevant matches between the two.",
+    "benefit": "A buyer can describe an item once and review potential matches as nearby sellers list what they have.",
+    "shots": [
+      {
+        "label": "Marketplace",
+        "portrait": false,
+        "src": "/images/work/froth-1.webp"
+      },
+      {
+        "label": "Wanted listings",
+        "portrait": false,
+        "src": "/images/work/froth-2.webp"
+      },
+      {
+        "label": "How matching works",
+        "portrait": false,
+        "src": "/images/work/froth-3.webp"
+      }
+    ],
+    "slug": "frothmonkey-ai-powered-marketplace"
+  },
+  {
+    "id": "fast",
+    "name": "FastFunLearning",
+    "kind": "Tools",
+    "type": "Learning games",
+    "color": "#705599",
+    "title": "Turn counting and spelling practice into play.",
+    "build": "A collection of short browser games lets children pop numbers in order, collect letters, and solve animal Sudoku puzzles.",
+    "benefit": "Children get a response to each move and can practise a skill again at their own pace.",
+    "shots": [
+      {
+        "label": "Game library",
+        "portrait": false,
+        "src": "/images/work/fast-1.webp"
+      },
+      {
+        "label": "Animal Sudoku",
+        "portrait": false,
+        "src": "/images/work/fast-2.webp"
+      },
+      {
+        "label": "Count to 100",
+        "portrait": false,
+        "src": "/images/work/fast-3.webp"
+      }
+    ],
+    "slug": "fast-fun-learning-custom-education-tools"
+  },
+  {
+    "id": "kelray",
+    "name": "Kelray Heating",
+    "kind": "Websites",
+    "type": "Guided shopping",
+    "color": "#927353",
+    "title": "Help buyers size a heater for their space.",
+    "build": "We rebuilt the outdoor heating storefront and added a planner that uses the customer’s space and measurements to guide heater selection.",
+    "benefit": "Customers can explore a layout and a suggested heater before asking the Kelray team for advice.",
+    "shots": [
+      {
+        "label": "Heater installation",
+        "portrait": false,
+        "src": "/images/work/kelray-1.webp"
+      },
+      {
+        "label": "Heater planner",
+        "portrait": false,
+        "src": "/images/work/kelray-2.webp"
+      }
+    ],
+    "slug": "kelray-heating-website-and-selection-wizard"
+  },
+  {
+    "id": "leon",
+    "name": "Leon Lebeniste Portal",
+    "kind": "Tools",
+    "type": "Distributor ordering",
+    "color": "#416297",
+    "title": "Give each distributor the right catalogue and pricing.",
+    "build": "A private portal lets approved distributors browse products, see their volume pricing, build an order, and generate a branded quote.",
+    "benefit": "Orders follow Leon Lebeniste’s pricing and approval rules from the start. The team had a working prototype to test in two business days.",
+    "shots": [
+      {
+        "label": "Distributor catalogue · private details obscured",
+        "portrait": false,
+        "src": "/images/work/leon-1.webp"
+      }
+    ],
+    "slug": "LeonLebenistePortal"
+  },
+  {
+    "id": "out",
+    "name": "Outflow Plumbing",
+    "kind": "Websites",
+    "type": "Local services",
+    "color": "#467a82",
+    "title": "Turn a plumbing referral into a useful enquiry.",
+    "build": "A Squamish plumbing website pairs a project journal with a service selector that carries the homeowner’s choice into an email enquiry.",
+    "benefit": "Homeowners can show Kyle the type of job they need, and he receives the details in the inbox he already uses.",
+    "shots": [
+      {
+        "label": "Homepage",
+        "portrait": false,
+        "src": "/images/work/out-1.webp"
+      },
+      {
+        "label": "Project journal",
+        "portrait": false,
+        "src": "/images/work/out-2.webp"
+      },
+      {
+        "label": "Service enquiry",
+        "portrait": false,
+        "src": "/images/work/out-3.webp"
+      }
+    ],
+    "slug": "outflow-plumbing-service-website"
+  }
+]

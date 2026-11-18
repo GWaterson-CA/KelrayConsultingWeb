@@ -1,45 +1,32 @@
-import Link from "next/link";
 import Image from "next/image";
-
-import { Button } from "@/components/ui/button";
-import { BRAND } from "@/lib/brand";
+import Link from "next/link";
 import { navLinks } from "@/lib/site-content";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-md">
-      <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="inline-flex items-center gap-3 text-slate-900">
-            <Image src="/brand/logo.svg" alt={BRAND.name} width={42} height={42} className="h-10 w-10 object-contain" />
-            <span className="text-base font-semibold tracking-tight sm:text-lg">{BRAND.name}</span>
-          </Link>
-          <nav className="hidden items-center gap-6 md:flex">
-            {navLinks.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium text-slate-500 transition-colors hover:text-slate-900"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-          <Button asChild size="sm">
-            <Link href="/book">
-              <span className="sm:hidden">Fit call</span>
-              <span className="hidden sm:inline">Book a 20-minute fit call</span>
-            </Link>
-          </Button>
-        </div>
-        <nav className="mt-3 flex gap-4 overflow-x-auto pb-1 text-sm md:hidden">
-          {navLinks.map((item) => (
-            <Link key={item.href} href={item.href} className="whitespace-nowrap text-slate-500 hover:text-slate-900">
-              {item.label}
+    <div className="ascent">
+      <header className="site-header wrap">
+        <Link
+          className="brand"
+          href="/"
+          aria-label="Ascent Business Solutions home"
+        >
+          <Image src="/brand/logo.svg" width={38} height={38} alt="" />
+          <span className="wordmark">
+            Ascent<small>Business Solutions</small>
+          </span>
+        </Link>
+        <nav aria-label="Main navigation">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href === "/contact" ? "/book" : link.href}
+            >
+              {link.label}
             </Link>
           ))}
         </nav>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }

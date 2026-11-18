@@ -12,7 +12,7 @@ import {
 
 export const navLinks = [
   { href: "/services", label: "Services" },
-  { href: "/case-studies", label: "Case Studies" },
+  { href: "/case-studies", label: "Our work" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
