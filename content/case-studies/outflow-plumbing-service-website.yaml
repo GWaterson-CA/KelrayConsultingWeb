@@ -1,11 +1,12 @@
 title: "Outflow Plumbing service website"
 client_name: "Outflow Plumbing"
-summary: "A service-led website for a Squamish plumbing business, with a project journal and an enquiry flow that prepares an email."
+client_website: "https://www.outflowplumbing.ca"
+summary: "A service-led website for a Squamish plumbing business, with photos of recent installations and a service enquiry form."
 industry: "Local services"
 work_types: ["Website", "Service enquiries"]
 problem: "Homeowners coming from a referral needed to understand which jobs Outflow handles and explain their own job in enough detail for Kyle to follow up."
-approach: "We grouped the services by the work homeowners need. Choosing a service carries it into an enquiry, where visitors can describe their job and prepare an email."
-deliverables: ["Service selector", "Project journal", "Email enquiry flow"]
+approach: "We grouped the services by the work homeowners need. Visitors can explore recent projects and describe their own job on the contact page."
+deliverables: ["Service descriptions", "Project gallery", "Service enquiry form"]
 tools: ["Responsive website design", "Structured email intake"]
 results: "Homeowners can browse examples of the work and send the job details through the inbox Kyle already uses."
 metrics:
@@ -14,10 +15,18 @@ metrics:
     outcomeType: "time_saved"
 published: true
 created_at: "2026-11-17T20:00:00Z"
-updated_at: "2026-11-17T20:00:00Z"
+updated_at: "2026-11-23T20:00:00Z"
 published_at: "2026-11-17T20:00:00Z"
 media:
   - type: image
-    url: "/images/work/out-1.webp"
+    url: "/images/work/outflow-1.webp"
     alt: "Outflow Plumbing service website homepage"
     sort_order: 1
+  - type: image
+    url: "/images/work/outflow-2.webp"
+    alt: "Outflow Plumbing’s Our Work page featuring a recent heating installation"
+    sort_order: 2
+  - type: image
+    url: "/images/work/outflow-3.webp"
+    alt: "Outflow Plumbing’s service enquiry page with contact details and a job enquiry form"
+    sort_order: 3

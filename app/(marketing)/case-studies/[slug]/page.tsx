@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
@@ -89,14 +89,11 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
         <p className="mt-4 text-lg text-slate-600">{caseStudy.summary}</p>
         <p className="mt-3 text-sm text-slate-500">Case study updated {formatDate(caseStudy.updated_at)}</p>
         {caseStudy.client_website ? (
-          <Link
-            href={caseStudy.client_website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex text-sm font-medium text-blue-600 hover:text-blue-700"
-          >
-            Visit {caseStudy.client_name || "client website"} ↗
-          </Link>
+          <Button asChild className="mt-4">
+            <a href={caseStudy.client_website} target="_blank" rel="noopener noreferrer">
+              Visit {caseStudy.client_name || "client"} website
+            </a>
+          </Button>
         ) : null}
       </AnimatedSection>
 

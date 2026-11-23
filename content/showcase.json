@@ -210,23 +210,23 @@
     "type": "Local services",
     "color": "#467a82",
     "title": "Turn a plumbing referral into a useful enquiry.",
-    "build": "A Squamish plumbing website pairs a project journal with a service selector that carries the homeowner’s choice into an email enquiry.",
+    "build": "Homeowners can explore eight plumbing and heating services, see photos of Kyle’s installations, and describe their job through the enquiry form.",
     "benefit": "Homeowners can show Kyle the type of job they need, and he receives the details in the inbox he already uses.",
     "shots": [
       {
         "label": "Homepage",
         "portrait": false,
-        "src": "/images/work/out-1.webp"
+        "src": "/images/work/outflow-1.webp"
       },
       {
-        "label": "Project journal",
+        "label": "Our work",
         "portrait": false,
-        "src": "/images/work/out-2.webp"
+        "src": "/images/work/outflow-2.webp"
       },
       {
         "label": "Service enquiry",
         "portrait": false,
-        "src": "/images/work/out-3.webp"
+        "src": "/images/work/outflow-3.webp"
       }
     ],
     "slug": "outflow-plumbing-service-website"
