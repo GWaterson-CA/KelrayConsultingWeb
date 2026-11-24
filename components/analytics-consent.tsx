@@ -21,8 +21,9 @@ function enableAnalytics() {
   if (document.querySelector(`script[data-ascent-analytics="${GA_ID}"]`)) return;
 
   window.dataLayer = window.dataLayer || [];
-  window.gtag = (...args: unknown[]) => {
-    window.dataLayer?.push(args);
+  window.gtag = function gtag() {
+    // eslint-disable-next-line prefer-rest-params -- Google reads queued commands as Arguments objects.
+    window.dataLayer?.push(arguments);
   };
   window.gtag("js", new Date());
   window.gtag("config", GA_ID, { anonymize_ip: true });
